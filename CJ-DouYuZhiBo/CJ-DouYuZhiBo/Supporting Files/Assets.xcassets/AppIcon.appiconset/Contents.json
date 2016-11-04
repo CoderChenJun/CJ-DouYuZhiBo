@@ -107,16 +107,6 @@
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
-    },
-    {
-      "idiom" : "iphone",
-      "size" : "20x20",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "iphone",
-      "size" : "20x20",
-      "scale" : "3x"
     }
   ],
   "info" : {

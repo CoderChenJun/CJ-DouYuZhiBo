@@ -11,8 +11,12 @@
 		CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */; };
 		CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */; };
 		CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69AB1DCC1BAF0040A703 /* Main.storyboard */; };
-		CC6C69B41DCC1BAF0040A703 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69AD1DCC1BAF0040A703 /* Info.plist */; };
 		CC6C69B51DCC1BAF0040A703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69AE1DCC1BAF0040A703 /* main.m */; };
+		CC6C69B81DCC20160040A703 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69B61DCC20160040A703 /* Home.storyboard */; };
+		CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69B91DCC20550040A703 /* Live.storyboard */; };
+		CC6C69C31DCC21BB0040A703 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69C11DCC21BB0040A703 /* Profile.storyboard */; };
+		CC6C69C91DCC227E0040A703 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69C71DCC227E0040A703 /* Follow.storyboard */; };
+		CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69E61DCC23A40040A703 /* CJMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,16 @@
 		CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC6C69AA1DCC1BAF0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC6C69AC1DCC1BAF0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC6C69AD1DCC1BAF0040A703 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC6C69AE1DCC1BAF0040A703 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC6C69B71DCC20160040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		CC6C69BA1DCC20550040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Live.storyboard; sourceTree = "<group>"; };
+		CC6C69C21DCC21BB0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		CC6C69C81DCC227E0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
+		CC6C69E51DCC23A40040A703 /* CJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
+		CC6C69E61DCC23A40040A703 /* CJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
+		CC6C69E81DCC24870040A703 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CC6C69E91DCC24AA0040A703 /* CJCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJCommon.h; sourceTree = "<group>"; };
+		CC6C69EA1DCC28BA0040A703 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,56 +79,14 @@
 			children = (
 				CC6C699D1DCC1BAF0040A703 /* AppDelegate.h */,
 				CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */,
-				CC6C69A21DCC1BAF0040A703 /* Main */,
-				CC6C69A01DCC1BAF0040A703 /* Home */,
-				CC6C69A11DCC1BAF0040A703 /* Live */,
-				CC6C699F1DCC1BAF0040A703 /* Follow */,
-				CC6C69A31DCC1BAF0040A703 /* Profile */,
-				CC6C69A41DCC1BAF0040A703 /* Tools */,
+				CC6C69CA1DCC23210040A703 /* Main */,
+				CC6C69D21DCC23410040A703 /* Home */,
+				CC6C69D61DCC23410040A703 /* Live */,
+				CC6C69CE1DCC23410040A703 /* Follow */,
+				CC6C69DA1DCC23410040A703 /* Profile */,
+				CC6C69DE1DCC23410040A703 /* Tools */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		CC6C699F1DCC1BAF0040A703 /* Follow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Follow;
-			sourceTree = "<group>";
-		};
-		CC6C69A01DCC1BAF0040A703 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		CC6C69A11DCC1BAF0040A703 /* Live */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		CC6C69A21DCC1BAF0040A703 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		CC6C69A31DCC1BAF0040A703 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		CC6C69A41DCC1BAF0040A703 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		CC6C69A71DCC1BAF0040A703 /* Supporting Files */ = {
@@ -125,10 +95,204 @@
 				CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */,
 				CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */,
 				CC6C69AB1DCC1BAF0040A703 /* Main.storyboard */,
-				CC6C69AD1DCC1BAF0040A703 /* Info.plist */,
+				CC6C69B61DCC20160040A703 /* Home.storyboard */,
+				CC6C69B91DCC20550040A703 /* Live.storyboard */,
+				CC6C69C71DCC227E0040A703 /* Follow.storyboard */,
+				CC6C69C11DCC21BB0040A703 /* Profile.storyboard */,
 				CC6C69AE1DCC1BAF0040A703 /* main.m */,
+				CC6C69EA1DCC28BA0040A703 /* Info.plist */,
+				CC6C69E81DCC24870040A703 /* PrefixHeader.pch */,
+				CC6C69E91DCC24AA0040A703 /* CJCommon.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC6C69CA1DCC23210040A703 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69CC1DCC23210040A703 /* Model */,
+				CC6C69CD1DCC23210040A703 /* View */,
+				CC6C69CB1DCC23210040A703 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC6C69CB1DCC23210040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69E51DCC23A40040A703 /* CJMainViewController.h */,
+				CC6C69E61DCC23A40040A703 /* CJMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69CC1DCC23210040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69CD1DCC23210040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC6C69CE1DCC23410040A703 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69CF1DCC23410040A703 /* Controller */,
+				CC6C69D01DCC23410040A703 /* Model */,
+				CC6C69D11DCC23410040A703 /* View */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		CC6C69CF1DCC23410040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69D01DCC23410040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69D11DCC23410040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC6C69D21DCC23410040A703 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69D31DCC23410040A703 /* Controller */,
+				CC6C69D41DCC23410040A703 /* Model */,
+				CC6C69D51DCC23410040A703 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CC6C69D31DCC23410040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69D41DCC23410040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69D51DCC23410040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC6C69D61DCC23410040A703 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69D71DCC23410040A703 /* Controller */,
+				CC6C69D81DCC23410040A703 /* Model */,
+				CC6C69D91DCC23410040A703 /* View */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		CC6C69D71DCC23410040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69D81DCC23410040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69D91DCC23410040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC6C69DA1DCC23410040A703 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69DB1DCC23410040A703 /* Controller */,
+				CC6C69DC1DCC23410040A703 /* Model */,
+				CC6C69DD1DCC23410040A703 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CC6C69DB1DCC23410040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69DC1DCC23410040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69DD1DCC23410040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC6C69DE1DCC23410040A703 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69DF1DCC23410040A703 /* Controller */,
+				CC6C69E01DCC23410040A703 /* Model */,
+				CC6C69E11DCC23410040A703 /* View */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CC6C69DF1DCC23410040A703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC6C69E01DCC23410040A703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6C69E11DCC23410040A703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +321,7 @@
 		CC6C69791DCC19320040A703 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CJ;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = ChenJun;
 				TargetAttributes = {
@@ -188,7 +353,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6C69B41DCC1BAF0040A703 /* Info.plist in Resources */,
+				CC6C69B81DCC20160040A703 /* Home.storyboard in Resources */,
+				CC6C69C31DCC21BB0040A703 /* Profile.storyboard in Resources */,
+				CC6C69C91DCC227E0040A703 /* Follow.storyboard in Resources */,
+				CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */,
 				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
 				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
 				CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */,
@@ -203,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
+				CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +393,38 @@
 				CC6C69AC1DCC1BAF0040A703 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC6C69B61DCC20160040A703 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC6C69B71DCC20160040A703 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		CC6C69B91DCC20550040A703 /* Live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC6C69BA1DCC20550040A703 /* Base */,
+			);
+			name = Live.storyboard;
+			sourceTree = "<group>";
+		};
+		CC6C69C11DCC21BB0040A703 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC6C69C21DCC21BB0040A703 /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		CC6C69C71DCC227E0040A703 /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC6C69C81DCC227E0040A703 /* Base */,
+			);
+			name = Follow.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,8 +517,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				INFOPLIST_FILE = "CJ-DouYuZhiBo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/CJ-DouYuZhiBo/CJ-DouYuZhiBo/CJ-DouYuZhiBo/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.ChenJun.CJ-DouYuZhiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,8 +531,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				INFOPLIST_FILE = "CJ-DouYuZhiBo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/CJ-DouYuZhiBo/CJ-DouYuZhiBo/CJ-DouYuZhiBo/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.ChenJun.CJ-DouYuZhiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +559,7 @@
 				CC6C699A1DCC19330040A703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

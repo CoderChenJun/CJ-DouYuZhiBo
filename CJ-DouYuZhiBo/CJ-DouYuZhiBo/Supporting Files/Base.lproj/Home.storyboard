@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="zLP-ap-OG0">
             <objects>
-                <viewController id="A39-ka-53Y" sceneMemberID="viewController">
+                <viewController id="A39-ka-53Y" customClass="CJHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j4X-8P-ZiO"/>
                         <viewControllerLayoutGuide type="bottom" id="5F5-YE-nL1"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPi-04-yRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="-349"/>
+            <point key="canvasLocation" x="931" y="-17"/>
         </scene>
         <!--首页-->
         <scene sceneID="gK3-3f-h7U">
@@ -41,7 +41,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5e-4U-24j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="-349"/>
+            <point key="canvasLocation" x="119" y="-17"/>
         </scene>
     </scenes>
     <resources>

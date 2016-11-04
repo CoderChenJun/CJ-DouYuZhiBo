@@ -17,6 +17,9 @@
 		CC6C69C31DCC21BB0040A703 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69C11DCC21BB0040A703 /* Profile.storyboard */; };
 		CC6C69C91DCC227E0040A703 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69C71DCC227E0040A703 /* Follow.storyboard */; };
 		CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69E61DCC23A40040A703 /* CJMainViewController.m */; };
+		CC6C69EE1DCC2A870040A703 /* CJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */; };
+		CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */; };
+		CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,12 @@
 		CC6C69E81DCC24870040A703 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CC6C69E91DCC24AA0040A703 /* CJCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJCommon.h; sourceTree = "<group>"; };
 		CC6C69EA1DCC28BA0040A703 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6C69EC1DCC2A870040A703 /* CJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeViewController.h; sourceTree = "<group>"; };
+		CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeViewController.m; sourceTree = "<group>"; };
+		CC6C69F01DCC2FBA0040A703 /* UIBarButtonItem+CJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CJ.h"; sourceTree = "<group>"; };
+		CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CJ.m"; sourceTree = "<group>"; };
+		CC6C69F31DCC2FFD0040A703 /* UIImage+CJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CJ.h"; sourceTree = "<group>"; };
+		CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +183,9 @@
 		CC6C69D21DCC23410040A703 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CC6C69D31DCC23410040A703 /* Controller */,
 				CC6C69D41DCC23410040A703 /* Model */,
 				CC6C69D51DCC23410040A703 /* View */,
+				CC6C69D31DCC23410040A703 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -184,6 +193,8 @@
 		CC6C69D31DCC23410040A703 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC6C69EC1DCC2A870040A703 /* CJHomeViewController.h */,
+				CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,32 +278,20 @@
 		CC6C69DE1DCC23410040A703 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CC6C69DF1DCC23410040A703 /* Controller */,
-				CC6C69E01DCC23410040A703 /* Model */,
-				CC6C69E11DCC23410040A703 /* View */,
+				CC6C69EF1DCC2F740040A703 /* Category */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		CC6C69DF1DCC23410040A703 /* Controller */ = {
+		CC6C69EF1DCC2F740040A703 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CC6C69F01DCC2FBA0040A703 /* UIBarButtonItem+CJ.h */,
+				CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */,
+				CC6C69F31DCC2FFD0040A703 /* UIImage+CJ.h */,
+				CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC6C69E01DCC23410040A703 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC6C69E11DCC23410040A703 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,
+				CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */,
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
 				CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */,
+				CC6C69EE1DCC2A870040A703 /* CJHomeViewController.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

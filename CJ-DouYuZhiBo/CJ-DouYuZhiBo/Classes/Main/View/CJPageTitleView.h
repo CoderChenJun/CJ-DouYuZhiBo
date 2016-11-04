@@ -8,7 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class CJPageTitleView;
+@protocol CJPageTitleViewDelegate <NSObject>
+
+@optional
+- (void)pageTitleView:(CJPageTitleView *)pageTitleView selectedIndex:(NSInteger)index;
+
+@end
+
+
+
+
+
+
 @interface CJPageTitleView : UIView
+
+
+@property (nonatomic, assign) id<CJPageTitleViewDelegate>delegate;
 
 
 
@@ -25,6 +42,11 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame Titles:(NSArray *)titles;
 
+
+
+
+
+- (void)setTitleWithProgress:(CGFloat)progress sourceIndex:(NSInteger)sourceIndex targetIndex:(NSInteger)targetIndex;
 
 
 @end

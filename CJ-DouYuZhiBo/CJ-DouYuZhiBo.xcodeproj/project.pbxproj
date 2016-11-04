@@ -21,6 +21,7 @@
 		CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */; };
 		CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */; };
 		CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F71DCC38520040A703 /* CJPageTitleView.m */; };
+		CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69FA1DCC63070040A703 /* CJPageContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CJ.m"; sourceTree = "<group>"; };
 		CC6C69F61DCC38520040A703 /* CJPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPageTitleView.h; sourceTree = "<group>"; };
 		CC6C69F71DCC38520040A703 /* CJPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPageTitleView.m; sourceTree = "<group>"; };
+		CC6C69F91DCC63070040A703 /* CJPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPageContentView.h; sourceTree = "<group>"; };
+		CC6C69FA1DCC63070040A703 /* CJPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPageContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 			children = (
 				CC6C69F61DCC38520040A703 /* CJPageTitleView.h */,
 				CC6C69F71DCC38520040A703 /* CJPageTitleView.m */,
+				CC6C69F91DCC63070040A703 /* CJPageContentView.h */,
+				CC6C69FA1DCC63070040A703 /* CJPageContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
 				CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */,
 				CC6C69EE1DCC2A870040A703 /* CJHomeViewController.m in Sources */,
+				CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

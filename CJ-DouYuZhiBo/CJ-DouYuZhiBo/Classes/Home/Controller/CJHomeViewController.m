@@ -8,6 +8,7 @@
 
 #import "CJHomeViewController.h"
 #import "CJPageTitleView.h"
+#import "CJPageContentView.h"
 
 
 #define CJPageTitleViewH 40
@@ -15,9 +16,12 @@
 
 
 
-@interface CJHomeViewController()
+@interface CJHomeViewController()<CJPageTitleViewDelegate,CJPageContentViewDelegate>
 
 @property (nonatomic, strong) CJPageTitleView *pageTitleView;
+
+@property (nonatomic, strong) CJPageContentView *pageContentView;
+
 
 @end
 
@@ -40,10 +44,46 @@
 //        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
 //        _pageTitleView.titles = titles;
         
+        _pageTitleView.delegate = self;
+        
+        
     }
     return _pageTitleView;
 }
 
+
+- (CJPageContentView *)pageContentView
+{
+    if (_pageContentView == nil)
+    {
+        
+        // 1.确定内容的frame
+        CGFloat contentH = CJUIScreenH - CJStatusBarH - CJNavigationBarH - CJPageTitleViewH;
+        CGRect contentFrame = CGRectMake(0, CJStatusBarH + CJNavigationBarH + CJPageTitleViewH, CJUIScreenW, contentH);
+        
+        
+        
+        // 2.确定所有的子控制器
+        NSMutableArray *childVcs =[NSMutableArray array];
+        for (int index = 0; index < 4; index++)
+        {
+            UIViewController *vc =[[UIViewController alloc] init];
+            vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+            [childVcs addObject:vc];
+        }
+        
+        
+        
+        
+        // 3.创建CJPageContentView
+        _pageContentView = [[CJPageContentView alloc] initWithFrame:contentFrame childVcs:childVcs parentViewController:self];
+        
+        _pageContentView.delegate = self;
+        
+    }
+    return _pageContentView;
+    
+}
 
 
 
@@ -73,6 +113,12 @@
     // 2.添加CJPageTitleView
     [self.view addSubview:self.pageTitleView];
     
+    
+    
+    // 3.添加CJPageContentView
+    [self.view addSubview:self.pageContentView];
+    
+    
 }
 
 
@@ -95,6 +141,29 @@
     
     
     
+}
+
+
+
+
+
+
+
+
+
+
+#pragma mark - 遵守 CJPageTitleViewDelegate 协议
+- (void)pageTitleView:(CJPageTitleView *)pageTitleView selectedIndex:(NSInteger)index
+{
+    [self.pageContentView setCurrentIndex:index];
+}
+
+
+
+#pragma mark - 遵守 CJPageContentViewDelegate 协议
+- (void)pageContentView:(CJPageContentView *)pageContentView progress:(CGFloat)progress sourceIndex:(NSInteger)sourceIndex targetIndex:(NSInteger)targetIndex
+{
+    [self.pageTitleView setTitleWithProgress:progress sourceIndex:sourceIndex targetIndex:targetIndex];
 }
 
 

@@ -11,6 +11,13 @@
 
 #define CJscrollLineH 2
 
+#define CJNormalColor0 85
+#define CJNormalColor1 85
+#define CJNormalColor2 85
+
+#define CJSelectColor0 255
+#define CJSelectColor1 128
+#define CJSelectColor2 0
 
 
 
@@ -23,6 +30,9 @@
 @property (nonatomic, strong) UIView *scrollLine;
 
 @property (nonatomic, strong) NSMutableArray *titleLabels;
+
+
+@property (nonatomic, assign) NSInteger currentIndex;
 
 
 
@@ -72,12 +82,6 @@
 
 
 
-
-
-
-
-
-
 - (void)setTitles:(NSArray *)titles
 {
     if (_titles != titles)
@@ -97,10 +101,6 @@
         
         self.titles = titles;
         
-        CJLog(@"%p",self.titles);
-        CJLog(@"%@",self.titles);
-        CJLog(@"%lu",(unsigned long)self.titles.count);
-        
 //        [self setupUI];
     }
     return self;
@@ -115,6 +115,10 @@
  */
 - (void)setupUI
 {
+    
+//    self.currentIndex = 0;
+    
+    
     
     // 1.添加UIScrollView
     self.scrollView.frame = self.bounds;
@@ -131,8 +135,6 @@
     
     
 }
-
-
 
 
 
@@ -155,7 +157,7 @@
         label.text = self.titles[index];
         label.tag = index;
         label.font = [UIFont systemFontOfSize:16.0];
-        label.textColor = [UIColor darkGrayColor];
+        label.textColor = CJColor(CJNormalColor0, CJNormalColor1, CJNormalColor2);
         label.textAlignment = NSTextAlignmentCenter;
         
         // 3.设置label的frame
@@ -168,15 +170,20 @@
         [self.titleLabels addObject:label];
         
         
+        
+        
+        
+        // 5.给label添加手势
+        [label setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelClick:)];
+        [label addGestureRecognizer:tapGes];
+        
+        
+        
     }
     
     
 }
-
-
-
-
-
 
 /**
  *  设置底线和滚动的滑块
@@ -191,22 +198,111 @@
     [self addSubview:bottomLine];
     
     
-    
-    
     // 2.添加scrollLine
-    
     // 2.1获取第一个label
     UILabel *firstLabel = self.titleLabels.firstObject;
-    firstLabel.textColor = [UIColor orangeColor];
+    firstLabel.textColor = CJColor(CJSelectColor0, CJSelectColor1, CJSelectColor2);
     
     // 2.2设置scrollLine的属性
     self.scrollLine.frame = CGRectMake(firstLabel.frame.origin.x, self.frame.size.height - CJscrollLineH, firstLabel.frame.size.width, CJscrollLineH);
     [self.scrollView addSubview:self.scrollLine];
     
     
+}
+
+
+
+- (void)titleLabelClick:(UITapGestureRecognizer *)tapGes
+{
+    
+    // 1.获取当前label
+    UILabel *currentLabel = (UILabel *)(tapGes.view);
+    
+    
+    // 2.获取之前的label
+    UILabel *oldLabel = self.titleLabels[self.currentIndex];
+    
+    
+    // 3.切换文字的颜色
+    currentLabel.textColor = CJColor(CJSelectColor0, CJSelectColor1, CJSelectColor2);
+    oldLabel.textColor = CJColor(CJNormalColor0, CJNormalColor1, CJNormalColor2);
+
+    
+    
+    // 4.保存最新label的下标值
+    self.currentIndex =currentLabel.tag;
+    
+    
+    // 5.滚动条位置发生改变
+    CGFloat scrollLineX = currentLabel.tag * self.scrollLine.frame.size.width;
+    
+    [UIView animateWithDuration:0.15 animations:^{
+        
+        CGRect scrollLineFrame = self.scrollLine.frame;
+        scrollLineFrame.origin.x = scrollLineX;
+        self.scrollLine.frame = scrollLineFrame;
+        
+    }];
+    
+    
+    
+    
+    
+    // 6.传递数据给上一个控制器(CJHomeViewController)
+    // 6.通知代理
+    if ([self.delegate respondsToSelector:@selector(pageTitleView:selectedIndex:)])
+    {
+        [self.delegate pageTitleView:self selectedIndex:self.currentIndex];
+    }
+    
     
     
 }
+
+
+
+
+
+
+#pragma mark - 对外暴露的方法
+- (void)setTitleWithProgress:(CGFloat)progress sourceIndex:(NSInteger)sourceIndex targetIndex:(NSInteger)targetIndex
+{
+    
+    // 1.取出sourceLabel\targetLabel
+    UILabel *sourceLabel = self.titleLabels[sourceIndex];
+    UILabel *targetLabel = self.titleLabels[targetIndex];
+    
+    
+    // 2.处理滑块的逻辑
+    CGFloat moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x;
+    CGFloat moveX = moveTotalX * progress;
+    
+//    self.scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX;
+    CGRect scrollLineFrame = self.scrollLine.frame;
+    scrollLineFrame.origin.x = sourceLabel.frame.origin.x + moveX;
+    self.scrollLine.frame = scrollLineFrame;
+    
+    
+    
+    
+    // 3.颜色的渐变(复杂)
+    // 3.1.取出变化的范围
+    CGFloat colorDelta0 = CJSelectColor0 - CJNormalColor0;
+    CGFloat colorDelta1 = CJSelectColor1 - CJNormalColor1;
+    CGFloat colorDelta2 = CJSelectColor2 - CJNormalColor2;
+    
+    // 3.2.变化sourceLabel颜色
+    sourceLabel.textColor = CJColor(CJSelectColor0 - colorDelta0 * progress, CJSelectColor1 - colorDelta1 * progress, CJSelectColor2 - colorDelta2 * progress);
+    
+    // 3.3.变化targetLabel颜色
+    targetLabel.textColor = CJColor(CJNormalColor0 + colorDelta0 * progress, CJNormalColor1 + colorDelta1 * progress, CJNormalColor2 + colorDelta2 * progress);
+    
+    
+    // 4.记录最新的currentIndex
+    self.currentIndex = targetIndex;
+    
+}
+
 
 
 

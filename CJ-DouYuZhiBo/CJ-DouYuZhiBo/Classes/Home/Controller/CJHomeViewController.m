@@ -7,14 +7,51 @@
 //
 
 #import "CJHomeViewController.h"
+#import "CJPageTitleView.h"
+
+
+#define CJPageTitleViewH 40
+
+
+
+
+@interface CJHomeViewController()
+
+@property (nonatomic, strong) CJPageTitleView *pageTitleView;
+
+@end
+
+
+
 
 @implementation CJHomeViewController
+
+
+- (CJPageTitleView *)pageTitleView
+{
+    if (_pageTitleView == nil)
+    {
+        
+        CGRect titleFrame = CGRectMake(0, CJStatusBarH + CJNavigationBarH, CJUIScreenW, CJPageTitleViewH);
+        NSArray *titles = @[@"推荐", @"游戏", @"娱乐", @"趣玩"];
+        
+        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame Titles:titles];
+        
+//        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
+//        _pageTitleView.titles = titles;
+        
+    }
+    return _pageTitleView;
+}
+
+
 
 
 
 - (void)viewDidLoad
 {
     [self setupUI];
+    
 }
 
 
@@ -24,13 +61,20 @@
  */
 - (void)setupUI
 {
+    // 0.不需要调整UIScrollView的内边距
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     
     // 1.设置导航栏
     [self setupNavigationBar];
     
     
     
+    // 2.添加CJPageTitleView
+    [self.view addSubview:self.pageTitleView];
+    
 }
+
 
 
 /**
@@ -58,27 +102,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 @end
-
-
-
-
-
-
-
-
-
 
 
 

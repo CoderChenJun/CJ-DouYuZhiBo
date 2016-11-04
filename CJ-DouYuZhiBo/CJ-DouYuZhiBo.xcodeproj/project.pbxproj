@@ -20,6 +20,7 @@
 		CC6C69EE1DCC2A870040A703 /* CJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */; };
 		CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */; };
 		CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */; };
+		CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69F71DCC38520040A703 /* CJPageTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		CC6C69F11DCC2FBA0040A703 /* UIBarButtonItem+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CJ.m"; sourceTree = "<group>"; };
 		CC6C69F31DCC2FFD0040A703 /* UIImage+CJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CJ.h"; sourceTree = "<group>"; };
 		CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CJ.m"; sourceTree = "<group>"; };
+		CC6C69F61DCC38520040A703 /* CJPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPageTitleView.h; sourceTree = "<group>"; };
+		CC6C69F71DCC38520040A703 /* CJPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPageTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 		CC6C69CD1DCC23210040A703 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC6C69F61DCC38520040A703 /* CJPageTitleView.h */,
+				CC6C69F71DCC38520040A703 /* CJPageTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,
 				CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */,
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,

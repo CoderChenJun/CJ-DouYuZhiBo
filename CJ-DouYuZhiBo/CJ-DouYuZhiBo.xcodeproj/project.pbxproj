@@ -7,25 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC6C69861DCC19330040A703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69851DCC19330040A703 /* main.m */; };
-		CC6C69891DCC19330040A703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69881DCC19330040A703 /* AppDelegate.m */; };
-		CC6C698C1DCC19330040A703 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C698B1DCC19330040A703 /* ViewController.m */; };
-		CC6C698F1DCC19330040A703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C698D1DCC19330040A703 /* Main.storyboard */; };
-		CC6C69911DCC19330040A703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69901DCC19330040A703 /* Assets.xcassets */; };
-		CC6C69941DCC19330040A703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69921DCC19330040A703 /* LaunchScreen.storyboard */; };
+		CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */; };
+		CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */; };
+		CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */; };
+		CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69AB1DCC1BAF0040A703 /* Main.storyboard */; };
+		CC6C69B41DCC1BAF0040A703 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69AD1DCC1BAF0040A703 /* Info.plist */; };
+		CC6C69B51DCC1BAF0040A703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C69AE1DCC1BAF0040A703 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC6C69811DCC19320040A703 /* CJ-DouYuZhiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CJ-DouYuZhiBo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC6C69851DCC19330040A703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CC6C69871DCC19330040A703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CC6C69881DCC19330040A703 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC6C698A1DCC19330040A703 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC6C698B1DCC19330040A703 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CC6C698E1DCC19330040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC6C69901DCC19330040A703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC6C69931DCC19330040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CC6C69951DCC19330040A703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6C699D1DCC1BAF0040A703 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC6C69AA1DCC1BAF0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC6C69AC1DCC1BAF0040A703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC6C69AD1DCC1BAF0040A703 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6C69AE1DCC1BAF0040A703 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,7 @@
 		CC6C69781DCC19320040A703 = {
 			isa = PBXGroup;
 			children = (
-				CC6C69831DCC19330040A703 /* CJ-DouYuZhiBo */,
+				CC6C699B1DCC1BAF0040A703 /* CJ-DouYuZhiBo */,
 				CC6C69821DCC19320040A703 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,28 +53,82 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC6C69831DCC19330040A703 /* CJ-DouYuZhiBo */ = {
+		CC6C699B1DCC1BAF0040A703 /* CJ-DouYuZhiBo */ = {
 			isa = PBXGroup;
 			children = (
-				CC6C69871DCC19330040A703 /* AppDelegate.h */,
-				CC6C69881DCC19330040A703 /* AppDelegate.m */,
-				CC6C698A1DCC19330040A703 /* ViewController.h */,
-				CC6C698B1DCC19330040A703 /* ViewController.m */,
-				CC6C698D1DCC19330040A703 /* Main.storyboard */,
-				CC6C69901DCC19330040A703 /* Assets.xcassets */,
-				CC6C69921DCC19330040A703 /* LaunchScreen.storyboard */,
-				CC6C69951DCC19330040A703 /* Info.plist */,
-				CC6C69841DCC19330040A703 /* Supporting Files */,
+				CC6C699C1DCC1BAF0040A703 /* Classes */,
+				CC6C69A71DCC1BAF0040A703 /* Supporting Files */,
 			);
 			path = "CJ-DouYuZhiBo";
 			sourceTree = "<group>";
 		};
-		CC6C69841DCC19330040A703 /* Supporting Files */ = {
+		CC6C699C1DCC1BAF0040A703 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CC6C69851DCC19330040A703 /* main.m */,
+				CC6C699D1DCC1BAF0040A703 /* AppDelegate.h */,
+				CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */,
+				CC6C69A21DCC1BAF0040A703 /* Main */,
+				CC6C69A01DCC1BAF0040A703 /* Home */,
+				CC6C69A11DCC1BAF0040A703 /* Live */,
+				CC6C699F1DCC1BAF0040A703 /* Follow */,
+				CC6C69A31DCC1BAF0040A703 /* Profile */,
+				CC6C69A41DCC1BAF0040A703 /* Tools */,
 			);
-			name = "Supporting Files";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CC6C699F1DCC1BAF0040A703 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		CC6C69A01DCC1BAF0040A703 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CC6C69A11DCC1BAF0040A703 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		CC6C69A21DCC1BAF0040A703 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC6C69A31DCC1BAF0040A703 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CC6C69A41DCC1BAF0040A703 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CC6C69A71DCC1BAF0040A703 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */,
+				CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */,
+				CC6C69AB1DCC1BAF0040A703 /* Main.storyboard */,
+				CC6C69AD1DCC1BAF0040A703 /* Info.plist */,
+				CC6C69AE1DCC1BAF0040A703 /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6C69941DCC19330040A703 /* LaunchScreen.storyboard in Resources */,
-				CC6C69911DCC19330040A703 /* Assets.xcassets in Resources */,
-				CC6C698F1DCC19330040A703 /* Main.storyboard in Resources */,
+				CC6C69B41DCC1BAF0040A703 /* Info.plist in Resources */,
+				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
+				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
+				CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,29 +202,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6C698C1DCC19330040A703 /* ViewController.m in Sources */,
-				CC6C69891DCC19330040A703 /* AppDelegate.m in Sources */,
-				CC6C69861DCC19330040A703 /* main.m in Sources */,
+				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
+				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC6C698D1DCC19330040A703 /* Main.storyboard */ = {
+		CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC6C698E1DCC19330040A703 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CC6C69921DCC19330040A703 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC6C69931DCC19330040A703 /* Base */,
+				CC6C69AA1DCC1BAF0040A703 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CC6C69AB1DCC1BAF0040A703 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC6C69AC1DCC1BAF0040A703 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -263,7 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "CJ-DouYuZhiBo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.ChenJun.CJ-DouYuZhiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +328,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "CJ-DouYuZhiBo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.ChenJun.CJ-DouYuZhiBo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

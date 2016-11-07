@@ -7,6 +7,10 @@
 //
 
 #import "CJRecommendViewController.h"
+#import "CJCollectionHeaderView.h"
+
+#import "CJRecommendViewModel.h"// MVVM设计模式---ViewModel
+#import "CJAnchorGroup.h"
 
 #define CJItemMargin 10
 #define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
@@ -23,6 +27,8 @@
 @interface CJRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) CJRecommendViewModel *recommendViewModel;
 
 
 
@@ -76,9 +82,20 @@
         
     }
     return _collectionView;
+    
 }
 
 
+
+
+
+- (CJRecommendViewModel *)recommendViewModel
+{
+    if (_recommendViewModel == nil) {
+        _recommendViewModel = [[CJRecommendViewModel alloc] init];
+    }
+    return _recommendViewModel;
+}
 
 
 
@@ -90,7 +107,16 @@
 {
     [super viewDidLoad];
     
+    // 1.设置UI界面
     [self setupUI];
+    
+    
+    
+    
+    
+    
+    // 2.发送网络请求
+    [self loadData];
     
     
     
@@ -110,6 +136,33 @@
 
 
 
+/**
+ *  发送网络请求
+ */
+- (void)loadData
+{
+    
+    [self.recommendViewModel requestDataFinishBlock:^{
+        
+        [self.collectionView reloadData];
+        
+    }];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -118,16 +171,23 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 12;
+    return self.recommendViewModel.anchorGroups.count;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (section == 0)
-    {
-        return 8;
-    }
-    return 4;
+    
+//    if (section == 0)
+//    {
+//        return 8;
+//    }
+//    return 4;
+    
+    
+    CJAnchorGroup *group = self.recommendViewModel.anchorGroups[section];
+    
+    return group.anchorModels.count;
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -144,6 +204,8 @@
     {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
     }
+    
+    
     return cell;
     
 }
@@ -151,7 +213,15 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     // 1.取出section的HeaderView
-    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:CJHeaderViewID forIndexPath:indexPath];
+//    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:CJHeaderViewID forIndexPath:indexPath];
+    
+    CJCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:CJHeaderViewID forIndexPath:indexPath];
+    
+    
+    // 2.取出模型
+    headerView.anchorGroup = self.recommendViewModel.anchorGroups[indexPath.section];
+    
+    
     
     return headerView;
     

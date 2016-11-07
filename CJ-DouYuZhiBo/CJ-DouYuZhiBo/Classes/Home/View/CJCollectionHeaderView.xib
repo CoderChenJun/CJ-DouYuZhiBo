@@ -58,6 +58,10 @@
                 <constraint firstItem="zvy-9y-Mzf" firstAttribute="top" secondItem="DwV-gi-h3x" secondAttribute="bottom" constant="11" id="wu8-Z4-hBa"/>
                 <constraint firstItem="zvy-9y-Mzf" firstAttribute="leading" secondItem="cfK-A7-ZRw" secondAttribute="leading" constant="10" id="wxU-YA-1Oy"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="zvy-9y-Mzf" id="9Nr-cU-pLR"/>
+                <outlet property="titleLabel" destination="8eT-Hd-47k" id="qMQ-mk-6T3"/>
+            </connections>
             <point key="canvasLocation" x="4" y="13"/>
         </collectionReusableView>
     </objects>

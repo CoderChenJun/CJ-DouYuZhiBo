@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJAnchorGroup.h"
+
 
 @interface CJCollectionHeaderView : UICollectionReusableView
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (nonatomic, strong) CJAnchorGroup *anchorGroup;
+
+
 @end
+
+
+
+

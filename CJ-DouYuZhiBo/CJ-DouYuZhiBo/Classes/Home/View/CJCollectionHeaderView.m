@@ -10,9 +10,33 @@
 
 @implementation CJCollectionHeaderView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+
+- (void)setAnchorGroup:(CJAnchorGroup *)anchorGroup
+{
+    if (_anchorGroup != anchorGroup)
+    {
+        _anchorGroup = anchorGroup;
+        
+        if (anchorGroup.tag_name)
+        {
+            self.titleLabel.text = anchorGroup.tag_name;
+        }
+        else
+        {
+            self.titleLabel.text = @"热门";
+        }
+        
+        if (anchorGroup.icon_name)
+        {
+            self.iconImageView.image = [UIImage imageNamed:anchorGroup.icon_name];
+        }
+        else
+        {
+            self.iconImageView.image = [UIImage imageNamed:@"home_header_hot"];
+        }
+    }
 }
+
+
 
 @end

@@ -89,7 +89,6 @@
         _titles = titles;
         [self setupUI];
     }
-    
 }
 
 

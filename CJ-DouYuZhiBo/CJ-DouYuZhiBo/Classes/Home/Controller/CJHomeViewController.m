@@ -9,7 +9,7 @@
 #import "CJHomeViewController.h"
 #import "CJPageTitleView.h"
 #import "CJPageContentView.h"
-
+#import "CJRecommendViewController.h"
 
 #define CJPageTitleViewH 40
 
@@ -41,8 +41,8 @@
         
         _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame Titles:titles];
         
-//        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
-//        _pageTitleView.titles = titles;
+        //        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
+        //        _pageTitleView.titles = titles;
         
         _pageTitleView.delegate = self;
         
@@ -58,14 +58,18 @@
     {
         
         // 1.确定内容的frame
-        CGFloat contentH = CJUIScreenH - CJStatusBarH - CJNavigationBarH - CJPageTitleViewH;
+        CGFloat contentH = CJUIScreenH - CJStatusBarH - CJNavigationBarH - CJPageTitleViewH - CJtabBarH;
         CGRect contentFrame = CGRectMake(0, CJStatusBarH + CJNavigationBarH + CJPageTitleViewH, CJUIScreenW, contentH);
         
         
         
         // 2.确定所有的子控制器
         NSMutableArray *childVcs =[NSMutableArray array];
-        for (int index = 0; index < 4; index++)
+        
+        CJRecommendViewController *recommendVc = [[CJRecommendViewController alloc] init];
+        [childVcs addObject:recommendVc];
+        
+        for (int index = 0; index < 3; index++)
         {
             UIViewController *vc =[[UIViewController alloc] init];
             vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
@@ -90,6 +94,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     [self setupUI];
     
 }

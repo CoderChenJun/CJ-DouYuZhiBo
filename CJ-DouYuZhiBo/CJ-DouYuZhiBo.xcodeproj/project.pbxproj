@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
+		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
+		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
+		CC58AECC1DD00B07003A5787 /* CJCollectionNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AECA1DD00B07003A5787 /* CJCollectionNormalCell.m */; };
+		CC58AECD1DD00B07003A5787 /* CJCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AECB1DD00B07003A5787 /* CJCollectionNormalCell.xib */; };
+		CC58AED11DD00B18003A5787 /* CJCollectionPrettyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AECF1DD00B18003A5787 /* CJCollectionPrettyCell.m */; };
+		CC58AED21DD00B18003A5787 /* CJCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AED01DD00B18003A5787 /* CJCollectionPrettyCell.xib */; };
 		CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */; };
 		CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A81DCC1BAF0040A703 /* Assets.xcassets */; };
 		CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6C69A91DCC1BAF0040A703 /* LaunchScreen.storyboard */; };
@@ -25,6 +32,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
+		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
+		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
+		CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionHeaderView.m; sourceTree = "<group>"; };
+		CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionHeaderView.xib; sourceTree = "<group>"; };
+		CC58AEC91DD00B07003A5787 /* CJCollectionNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionNormalCell.h; sourceTree = "<group>"; };
+		CC58AECA1DD00B07003A5787 /* CJCollectionNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionNormalCell.m; sourceTree = "<group>"; };
+		CC58AECB1DD00B07003A5787 /* CJCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionNormalCell.xib; sourceTree = "<group>"; };
+		CC58AECE1DD00B18003A5787 /* CJCollectionPrettyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionPrettyCell.h; sourceTree = "<group>"; };
+		CC58AECF1DD00B18003A5787 /* CJCollectionPrettyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionPrettyCell.m; sourceTree = "<group>"; };
+		CC58AED01DD00B18003A5787 /* CJCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionPrettyCell.xib; sourceTree = "<group>"; };
 		CC6C69811DCC19320040A703 /* CJ-DouYuZhiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CJ-DouYuZhiBo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6C699D1DCC1BAF0040A703 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +173,12 @@
 				CC6C69F71DCC38520040A703 /* CJPageTitleView.m */,
 				CC6C69F91DCC63070040A703 /* CJPageContentView.h */,
 				CC6C69FA1DCC63070040A703 /* CJPageContentView.m */,
+				CC58AEC91DD00B07003A5787 /* CJCollectionNormalCell.h */,
+				CC58AECA1DD00B07003A5787 /* CJCollectionNormalCell.m */,
+				CC58AECB1DD00B07003A5787 /* CJCollectionNormalCell.xib */,
+				CC58AECE1DD00B18003A5787 /* CJCollectionPrettyCell.h */,
+				CC58AECF1DD00B18003A5787 /* CJCollectionPrettyCell.m */,
+				CC58AED01DD00B18003A5787 /* CJCollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +229,8 @@
 			children = (
 				CC6C69EC1DCC2A870040A703 /* CJHomeViewController.h */,
 				CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */,
+				CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */,
+				CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +245,9 @@
 		CC6C69D51DCC23410040A703 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */,
+				CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */,
+				CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,10 +391,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */,
 				CC6C69B81DCC20160040A703 /* Home.storyboard in Resources */,
 				CC6C69C31DCC21BB0040A703 /* Profile.storyboard in Resources */,
 				CC6C69C91DCC227E0040A703 /* Follow.storyboard in Resources */,
+				CC58AED21DD00B18003A5787 /* CJCollectionPrettyCell.xib in Resources */,
 				CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */,
+				CC58AECD1DD00B07003A5787 /* CJCollectionNormalCell.xib in Resources */,
 				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
 				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
 				CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */,
@@ -380,10 +412,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */,
+				CC58AECC1DD00B07003A5787 /* CJCollectionNormalCell.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,
 				CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */,
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
 				CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */,
+				CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */,
+				CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */,
+				CC58AED11DD00B18003A5787 /* CJCollectionPrettyCell.m in Sources */,
 				CC6C69EE1DCC2A870040A703 /* CJHomeViewController.m in Sources */,
 				CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,

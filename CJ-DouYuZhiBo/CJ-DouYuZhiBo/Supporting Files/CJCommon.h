@@ -59,6 +59,7 @@
 
 #define CJStatusBarH 20
 #define CJNavigationBarH 44
+#define CJtabBarH 44
 
 #define CJUIScreenW [UIScreen mainScreen].bounds.size.width
 #define CJUIScreenH [UIScreen mainScreen].bounds.size.height

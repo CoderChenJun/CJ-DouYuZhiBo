@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoK-o7-ydd">
-                        <rect key="frame" x="19" y="143.5" width="208" height="13.5"/>
+                        <rect key="frame" x="19" y="143" width="208" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -40,34 +40,47 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYP-64-OkL">
-                        <rect key="frame" x="5" y="119.5" width="64.5" height="13.5"/>
+                        <rect key="frame" x="5" y="119" width="65" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gO-T2-ddu">
-                        <rect key="frame" x="169" y="117" width="58" height="16"/>
+                        <rect key="frame" x="169" y="5" width="58" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="CJ-在线" image="Image_online"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="2gO-T2-ddu" firstAttribute="bottom" secondItem="NwU-5R-ifO" secondAttribute="bottom" constant="-5" id="0R8-N6-uwf"/>
-                <constraint firstItem="2gO-T2-ddu" firstAttribute="trailing" secondItem="NwU-5R-ifO" secondAttribute="trailing" constant="-5" id="6cu-eX-H8e"/>
                 <constraint firstItem="NwU-5R-ifO" firstAttribute="top" secondItem="IkF-Mj-Uo5" secondAttribute="top" id="Bq6-vd-dsH"/>
                 <constraint firstItem="hdG-dn-CWt" firstAttribute="leading" secondItem="IkF-Mj-Uo5" secondAttribute="leading" id="Gog-Bg-aMv"/>
                 <constraint firstItem="lYP-64-OkL" firstAttribute="bottom" secondItem="NwU-5R-ifO" secondAttribute="bottom" constant="-5" id="Hdt-uf-QZu"/>
+                <constraint firstItem="2gO-T2-ddu" firstAttribute="top" secondItem="IkF-Mj-Uo5" secondAttribute="top" constant="5" id="PPD-HX-vQ0"/>
                 <constraint firstAttribute="trailing" secondItem="NwU-5R-ifO" secondAttribute="trailing" id="Uzu-jq-qEx"/>
                 <constraint firstItem="IoK-o7-ydd" firstAttribute="centerY" secondItem="hdG-dn-CWt" secondAttribute="centerY" id="VbZ-FC-f0q"/>
                 <constraint firstAttribute="trailing" secondItem="IoK-o7-ydd" secondAttribute="trailing" constant="5" id="bIW-BL-2cd"/>
                 <constraint firstAttribute="bottom" secondItem="hdG-dn-CWt" secondAttribute="bottom" constant="10" id="dN0-ev-igo"/>
                 <constraint firstItem="lYP-64-OkL" firstAttribute="leading" secondItem="NwU-5R-ifO" secondAttribute="leading" constant="5" id="gsj-lC-Jro"/>
+                <constraint firstAttribute="trailing" secondItem="2gO-T2-ddu" secondAttribute="trailing" constant="5" id="guB-Gy-jFN"/>
                 <constraint firstItem="NwU-5R-ifO" firstAttribute="leading" secondItem="IkF-Mj-Uo5" secondAttribute="leading" id="iN0-cW-2Zi"/>
                 <constraint firstItem="IoK-o7-ydd" firstAttribute="leading" secondItem="hdG-dn-CWt" secondAttribute="trailing" constant="5" id="nXz-2U-rJF"/>
                 <constraint firstItem="hdG-dn-CWt" firstAttribute="top" secondItem="NwU-5R-ifO" secondAttribute="bottom" constant="5" id="pSf-4R-dhZ"/>
             </constraints>
             <size key="customSize" width="232" height="167"/>
+            <connections>
+                <outlet property="iconImageView" destination="NwU-5R-ifO" id="FkB-08-HaA"/>
+                <outlet property="nickNameLabel" destination="lYP-64-OkL" id="2fP-Pm-rW5"/>
+                <outlet property="onlineBtn" destination="2gO-T2-ddu" id="G8A-aX-HLM"/>
+                <outlet property="roomNameLabel" destination="IoK-o7-ydd" id="wjS-oD-eLn"/>
+            </connections>
             <point key="canvasLocation" x="-63" y="-29"/>
         </collectionViewCell>
     </objects>

@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="195" height="240"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-SP-GEQ">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-SP-GEQ">
                         <rect key="frame" x="0.0" y="216" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="Xeg-nm-8vo"/>
@@ -45,39 +45,46 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5G-Qd-KL0">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjS-Dz-o2a">
                         <rect key="frame" x="130" y="5" width="60" height="20"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="YIo-ZX-Ja3"/>
-                            <constraint firstAttribute="width" constant="60" id="yaF-41-Rse"/>
+                            <constraint firstAttribute="width" constant="60" id="BjB-8O-3CO"/>
+                            <constraint firstAttribute="height" constant="20" id="I1J-iN-urx"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="8888在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="iWP-SP-GEQ" secondAttribute="bottom" constant="10" id="6f9-fc-zcK"/>
                 <constraint firstItem="iMI-Qg-8sl" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="78F-lU-yCg"/>
-                <constraint firstItem="B5G-Qd-KL0" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" constant="5" id="CgZ-aC-8Jw"/>
                 <constraint firstItem="iWP-SP-GEQ" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="K8L-jF-NjL"/>
+                <constraint firstItem="EjS-Dz-o2a" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" constant="5" id="PA3-fe-ysK"/>
+                <constraint firstAttribute="trailing" secondItem="EjS-Dz-o2a" secondAttribute="trailing" constant="5" id="QRI-ye-8Fz"/>
                 <constraint firstItem="6Rn-32-8fg" firstAttribute="top" secondItem="iMI-Qg-8sl" secondAttribute="bottom" constant="5" id="X98-Ax-4yk"/>
                 <constraint firstAttribute="trailing" secondItem="6Rn-32-8fg" secondAttribute="trailing" constant="5" id="frm-sM-olf"/>
                 <constraint firstItem="iMI-Qg-8sl" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" id="gqJ-Sd-RX5"/>
-                <constraint firstAttribute="trailing" secondItem="B5G-Qd-KL0" secondAttribute="trailing" constant="5" id="hk1-sn-cxw"/>
                 <constraint firstItem="6Rn-32-8fg" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="qHn-xy-gza"/>
                 <constraint firstItem="iWP-SP-GEQ" firstAttribute="top" secondItem="6Rn-32-8fg" secondAttribute="bottom" constant="5" id="vGl-1Z-yKY"/>
                 <constraint firstAttribute="trailing" secondItem="iMI-Qg-8sl" secondAttribute="trailing" id="vag-nX-hQU"/>
             </constraints>
             <size key="customSize" width="195" height="240"/>
+            <connections>
+                <outlet property="cityBtn" destination="iWP-SP-GEQ" id="GdW-BJ-eP6"/>
+                <outlet property="iconImageView" destination="iMI-Qg-8sl" id="QGH-mx-Xts"/>
+                <outlet property="nickNameLabel" destination="6Rn-32-8fg" id="AZ1-bH-e5M"/>
+                <outlet property="onlineBtn" destination="EjS-Dz-o2a" id="BKQ-KE-ULm"/>
+            </connections>
             <point key="canvasLocation" x="416.5" y="-436"/>
         </collectionViewCell>
     </objects>

@@ -44,6 +44,9 @@
 		CCAB12E01DD0519200ECDF78 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12D51DD0519200ECDF78 /* NSString+MJExtension.m */; };
 		CCAB12E31DD0526300ECDF78 /* CJAnchorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12E21DD0526300ECDF78 /* CJAnchorGroup.m */; };
 		CCAB12E61DD0577700ECDF78 /* CJAnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12E51DD0577700ECDF78 /* CJAnchorModel.m */; };
+		CCAB12E91DD080DF00ECDF78 /* CJCollectionBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12E81DD080DF00ECDF78 /* CJCollectionBaseCell.m */; };
+		CCAB12EB1DD081F500ECDF78 /* CJCollectionNormalCell in Resources */ = {isa = PBXBuildFile; fileRef = CCAB12EA1DD081F500ECDF78 /* CJCollectionNormalCell */; };
+		CCAB12ED1DD0820E00ECDF78 /* CJCollectionPrettyCell in Resources */ = {isa = PBXBuildFile; fileRef = CCAB12EC1DD0820E00ECDF78 /* CJCollectionPrettyCell */; };
 		CCD8AB491DD0305200F62573 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB3D1DD0305200F62573 /* AFHTTPSessionManager.m */; };
 		CCD8AB4A1DD0305200F62573 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB401DD0305200F62573 /* AFNetworkReachabilityManager.m */; };
 		CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB421DD0305200F62573 /* AFSecurityPolicy.m */; };
@@ -130,6 +133,10 @@
 		CCAB12E21DD0526300ECDF78 /* CJAnchorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAnchorGroup.m; sourceTree = "<group>"; };
 		CCAB12E41DD0577700ECDF78 /* CJAnchorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAnchorModel.h; sourceTree = "<group>"; };
 		CCAB12E51DD0577700ECDF78 /* CJAnchorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAnchorModel.m; sourceTree = "<group>"; };
+		CCAB12E71DD080DF00ECDF78 /* CJCollectionBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionBaseCell.h; sourceTree = "<group>"; };
+		CCAB12E81DD080DF00ECDF78 /* CJCollectionBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionBaseCell.m; sourceTree = "<group>"; };
+		CCAB12EA1DD081F500ECDF78 /* CJCollectionNormalCell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CJCollectionNormalCell; sourceTree = "<group>"; };
+		CCAB12EC1DD0820E00ECDF78 /* CJCollectionPrettyCell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CJCollectionPrettyCell; sourceTree = "<group>"; };
 		CCD8AB3C1DD0305200F62573 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		CCD8AB3D1DD0305200F62573 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		CCD8AB3E1DD0305200F62573 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -279,6 +286,10 @@
 				CC58AECE1DD00B18003A5787 /* CJCollectionPrettyCell.h */,
 				CC58AECF1DD00B18003A5787 /* CJCollectionPrettyCell.m */,
 				CC58AED01DD00B18003A5787 /* CJCollectionPrettyCell.xib */,
+				CCAB12E71DD080DF00ECDF78 /* CJCollectionBaseCell.h */,
+				CCAB12E81DD080DF00ECDF78 /* CJCollectionBaseCell.m */,
+				CCAB12EA1DD081F500ECDF78 /* CJCollectionNormalCell */,
+				CCAB12EC1DD0820E00ECDF78 /* CJCollectionPrettyCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -601,7 +612,9 @@
 				CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */,
 				CC58AECD1DD00B07003A5787 /* CJCollectionNormalCell.xib in Resources */,
 				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
+				CCAB12EB1DD081F500ECDF78 /* CJCollectionNormalCell in Resources */,
 				CCAB12D61DD0519200ECDF78 /* Info.plist in Resources */,
+				CCAB12ED1DD0820E00ECDF78 /* CJCollectionPrettyCell in Resources */,
 				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
 				CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -615,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */,
+				CCAB12E91DD080DF00ECDF78 /* CJCollectionBaseCell.m in Sources */,
 				CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */,
 				CC58AECC1DD00B07003A5787 /* CJCollectionNormalCell.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,

@@ -8,9 +8,12 @@
 
 #import "CJRecommendViewController.h"
 #import "CJCollectionHeaderView.h"
+#import "CJCollectionNormalCell.h"
+#import "CJCollectionPrettyCell.h"
 
 #import "CJRecommendViewModel.h"// MVVM设计模式---ViewModel
 #import "CJAnchorGroup.h"
+#import "CJAnchorModel.h"
 
 #define CJItemMargin 10
 #define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
@@ -192,23 +195,40 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 1.定义cell
-    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
     
-    // 2.取出cell
+    // 0.取出模型对象
+    CJAnchorGroup *anchorGroup = self.recommendViewModel.anchorGroups[indexPath.section];
+    CJAnchorModel *anchorModel = anchorGroup.anchorModels[indexPath.item];
+    
+    
+    
+    
+    
+    
+    
+    // 1.取出cell
     if (indexPath.section == 1)
     {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJPrettyCellID forIndexPath:indexPath];
+        CJCollectionPrettyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJPrettyCellID forIndexPath:indexPath];
+        
+        cell.anchorModel = anchorModel;
+        
+        return cell;
     }
     else
     {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
+        CJCollectionNormalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
+        
+        cell.anchorModel = anchorModel;
+        
+        return cell;
     }
     
     
-    return cell;
     
 }
+
+
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {

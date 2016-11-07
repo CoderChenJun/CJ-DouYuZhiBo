@@ -143,7 +143,7 @@
     UIBarButtonItem *historyItem = [[UIBarButtonItem alloc] initWithImage:@"image_my_history" highImage:@"Image_my_history_click" Size:size];
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithImage:@"btn_search" highImage:@"btn_search_click" Size:size];
     UIBarButtonItem *qrcodeItem = [[UIBarButtonItem alloc] initWithImage:@"Image_qrcode" highImage:@"Image_qrcode_click" Size:size];
-    self.navigationItem.rightBarButtonItems = @[historyItem, searchItem, qrcodeItem];
+    self.navigationItem.rightBarButtonItems = @[searchItem, qrcodeItem, historyItem];
     
     
     

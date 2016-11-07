@@ -7,7 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJAnchorModel.h"
+#import "CJCollectionBaseCell.h"
 
-@interface CJCollectionPrettyCell : UICollectionViewCell
+@interface CJCollectionPrettyCell : CJCollectionBaseCell
+
+
+//@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+//@property (weak, nonatomic) IBOutlet UIButton *onlineBtn;
+//@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *cityBtn;
+
+
+@property (nonatomic, strong) CJAnchorModel *anchorModel;
+
+
 
 @end
+
+
+
+
+
+
+

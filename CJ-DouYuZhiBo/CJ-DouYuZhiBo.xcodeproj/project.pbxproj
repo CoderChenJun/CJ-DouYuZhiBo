@@ -30,6 +30,11 @@
 		CC0D73C61DD16CED005CE9D9 /* CJRecommendViewModel in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73C51DD16CED005CE9D9 /* CJRecommendViewModel */; };
 		CC0D73C91DD17E36005CE9D9 /* CJCollectionBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73C81DD17E36005CE9D9 /* CJCollectionBaseCell.m */; };
 		CC0D73CC1DD17E94005CE9D9 /* CJCollectionNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73CB1DD17E94005CE9D9 /* CJCollectionNormalCell.m */; };
+		CC0D73D21DD18178005CE9D9 /* CJRecommendCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73D11DD18178005CE9D9 /* CJRecommendCycleView.m */; };
+		CC0D73D41DD181B1005CE9D9 /* CJRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73D31DD181B1005CE9D9 /* CJRecommendCycleView.xib */; };
+		CC0D73D71DD1AAEB005CE9D9 /* CJCycleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73D61DD1AAEB005CE9D9 /* CJCycleModel.m */; };
+		CC0D73DB1DD1B26E005CE9D9 /* CJCollectionCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */; };
+		CC0D73DC1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */; };
 		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
 		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
 		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
@@ -130,6 +135,14 @@
 		CC0D73C81DD17E36005CE9D9 /* CJCollectionBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionBaseCell.m; sourceTree = "<group>"; };
 		CC0D73CA1DD17E94005CE9D9 /* CJCollectionNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionNormalCell.h; sourceTree = "<group>"; };
 		CC0D73CB1DD17E94005CE9D9 /* CJCollectionNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionNormalCell.m; sourceTree = "<group>"; };
+		CC0D73D01DD18178005CE9D9 /* CJRecommendCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendCycleView.h; sourceTree = "<group>"; };
+		CC0D73D11DD18178005CE9D9 /* CJRecommendCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendCycleView.m; sourceTree = "<group>"; };
+		CC0D73D31DD181B1005CE9D9 /* CJRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRecommendCycleView.xib; sourceTree = "<group>"; };
+		CC0D73D51DD1AAEB005CE9D9 /* CJCycleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCycleModel.h; sourceTree = "<group>"; };
+		CC0D73D61DD1AAEB005CE9D9 /* CJCycleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCycleModel.m; sourceTree = "<group>"; };
+		CC0D73D81DD1B26E005CE9D9 /* CJCollectionCycleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionCycleCell.h; sourceTree = "<group>"; };
+		CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionCycleCell.m; sourceTree = "<group>"; };
+		CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionCycleCell.xib; sourceTree = "<group>"; };
 		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
 		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
 		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -501,6 +514,8 @@
 		CC6C69D41DCC23410040A703 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC0D73D51DD1AAEB005CE9D9 /* CJCycleModel.h */,
+				CC0D73D61DD1AAEB005CE9D9 /* CJCycleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,6 +526,12 @@
 				CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */,
 				CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */,
 				CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */,
+				CC0D73D01DD18178005CE9D9 /* CJRecommendCycleView.h */,
+				CC0D73D11DD18178005CE9D9 /* CJRecommendCycleView.m */,
+				CC0D73D31DD181B1005CE9D9 /* CJRecommendCycleView.xib */,
+				CC0D73D81DD1B26E005CE9D9 /* CJCollectionCycleCell.h */,
+				CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */,
+				CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -731,6 +752,7 @@
 					CC6C69801DCC19320040A703 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = LQB76773LR;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -770,6 +792,8 @@
 				CCAB12D61DD0519200ECDF78 /* Info.plist in Resources */,
 				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
 				CC6C69B21DCC1BAF0040A703 /* LaunchScreen.storyboard in Resources */,
+				CC0D73D41DD181B1005CE9D9 /* CJRecommendCycleView.xib in Resources */,
+				CC0D73DC1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +827,7 @@
 				CC0D73C01DD164E6005CE9D9 /* MJRefreshConst.m in Sources */,
 				CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */,
 				CC0D73B91DD164E6005CE9D9 /* MJRefreshBackGifFooter.m in Sources */,
+				CC0D73D71DD1AAEB005CE9D9 /* CJCycleModel.m in Sources */,
 				CCAB12D91DD0519200ECDF78 /* MJProperty.m in Sources */,
 				CC0D73C21DD164E6005CE9D9 /* UIScrollView+MJExtension.m in Sources */,
 				CCD8AB4E1DD0305200F62573 /* AFURLSessionManager.m in Sources */,
@@ -829,6 +854,7 @@
 				CC0D73B21DD164E6005CE9D9 /* MJRefreshBackFooter.m in Sources */,
 				CCAB12BB1DD0464000ECDF78 /* CJRecommendViewModel.m in Sources */,
 				CCAB12D81DD0519200ECDF78 /* MJFoundation.m in Sources */,
+				CC0D73DB1DD1B26E005CE9D9 /* CJCollectionCycleCell.m in Sources */,
 				CCD8AB671DD0338500F62573 /* AFAutoPurgingImageCache.m in Sources */,
 				CC0D73BC1DD164E6005CE9D9 /* MJRefreshGifHeader.m in Sources */,
 				CCD8AB6A1DD0338500F62573 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -836,6 +862,7 @@
 				CC0D73B71DD164E6005CE9D9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				CCD8AB6F1DD0338500F62573 /* UIWebView+AFNetworking.m in Sources */,
 				CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */,
+				CC0D73D21DD18178005CE9D9 /* CJRecommendCycleView.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 				CC0D73B51DD164E6005CE9D9 /* MJRefreshHeader.m in Sources */,
 				CCAB12D71DD0519200ECDF78 /* MJExtensionConst.m in Sources */,
@@ -990,6 +1017,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LQB76773LR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/Info.plist";
@@ -1005,6 +1033,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LQB76773LR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CJ-DouYuZhiBo/Supporting Files/Info.plist";

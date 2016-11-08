@@ -7,15 +7,22 @@
 //
 
 #import "CJRecommendViewController.h"
-#import "CJCollectionHeaderView.h"
-#import "CJCollectionNormalCell.h"
-#import "CJCollectionPrettyCell.h"
-#import "CJCollectionBaseCell.h"
+
+
+#import "CJRecommendCycleView.h"// 轮播器View
+
 
 
 #import "CJRecommendViewModel.h"// MVVM设计模式---ViewModel
+#import "CJCollectionNormalCell.h"
+#import "CJCollectionPrettyCell.h"
+#import "CJCollectionBaseCell.h"
+#import "CJCollectionHeaderView.h"// 每个cell的头部View
+
 #import "CJAnchorGroup.h"
 #import "CJAnchorModel.h"
+
+
 
 #define CJItemMargin 10
 #define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
@@ -23,6 +30,11 @@
 //#define CJPrettyItemH (CJItemW * 4 / 3)
 #define CJPrettyItemH (CJItemW * 8 / 7)
 #define CJHeaderViewH 50
+
+
+#define CJRecommendCycleViewH (CJUIScreenW * 3 / 8)
+
+
 
 #define CJNormalCellID @"CJNormalCellID"
 #define CJPrettyCellID @"CJPrettyCellID"
@@ -37,6 +49,8 @@
 @property (nonatomic, strong) CJRecommendViewModel *recommendViewModel;
 
 
+@property (nonatomic, strong) CJRecommendCycleView *recommendCycleView;
+
 
 @end
 
@@ -46,6 +60,22 @@
 
 
 @implementation CJRecommendViewController
+
+
+
+- (CJRecommendCycleView *)recommendCycleView
+{
+    if (_recommendCycleView == nil)
+    {
+        _recommendCycleView = [CJRecommendCycleView recommendCycleView];
+        _recommendCycleView.frame =CGRectMake(0, -CJRecommendCycleViewH, CJUIScreenW, CJRecommendCycleViewH);
+    }
+    return _recommendCycleView;
+}
+
+
+
+
 
 
 - (UICollectionView *)collectionView
@@ -94,8 +124,6 @@
 
 
 
-
-
 - (CJRecommendViewModel *)recommendViewModel
 {
     if (_recommendViewModel == nil) {
@@ -134,7 +162,17 @@
  */
 - (void)setupUI
 {
+    
+    // 1.将_collectionView添加到控制器的View中
     [self.view addSubview:self.collectionView];
+    
+    // 2.将_recommendCycleView添加到_collectionView
+    [self.collectionView addSubview:self.recommendCycleView];
+    
+    
+    // 3.设置_collectionView的内边距---为了让_recommendCycleView显示出来
+    self.collectionView.contentInset = UIEdgeInsetsMake(CJRecommendCycleViewH, 0, 0, 0);
+    
 }
 
 
@@ -162,14 +200,30 @@
  */
 - (void)loadData
 {
-    [self.recommendViewModel requestDataFinishBlock:^{
+    
+    // 1.请求---轮播器数据
+    [self.recommendViewModel requestCycleDataFinishBlock:^{
+        CJLog(@"CJRecommendViewController------轮播器数据请求完成");
         
-        [self.collectionView reloadData];
-        
+        self.recommendCycleView.cycleModels = self.recommendViewModel.cycleModels;
     }];
+    
+    
+    // 2.请求---推荐数据
+    [self.recommendViewModel requestDataFinishBlock:^{
+        [self.collectionView reloadData];
+    }];
+    
+    
+    
+    
+    
     
 //    // 让刷新控件停止显示刷新状态
 //    [self.collectionView.mj_header endRefreshing];
+    
+    
+    
 }
 
 

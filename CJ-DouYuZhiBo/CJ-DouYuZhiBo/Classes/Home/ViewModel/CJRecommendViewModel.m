@@ -10,6 +10,7 @@
 
 #import "CJAnchorGroup.h"
 #import "CJAnchorModel.h"
+#import "CJCycleModel.h"
 
 
 
@@ -20,7 +21,6 @@
 @property (nonatomic, strong) CJAnchorGroup *prettyGroup;
 
 
-
 @end
 
 
@@ -29,6 +29,18 @@
 
 
 @implementation CJRecommendViewModel
+
+
+
+- (NSMutableArray *)cycleModels
+{
+    if (_cycleModels == nil)
+    {
+        _cycleModels = [NSMutableArray array];
+    }
+    return _cycleModels;
+}
+
 
 
 
@@ -64,7 +76,7 @@
 
 
 /**
- *  发送网络请求
+ *  请求---(推荐内容数据)
  */
 - (void)requestDataFinishBlock:(MyBlock)finishCallback
 {
@@ -174,7 +186,9 @@
     
     
     
+    //    http://www.douyutv.com/api/v1/slide/6?version=2.300
     
+    //    http://capi.douyutv.com/api/v1/slide/6?version=2.300
     
     //    http://capi.douyucdn.cn/api/v1/getbigDataRoom?limit=4&offset=0&time=1478573658
     
@@ -245,6 +259,44 @@
     
 }
 
+
+
+
+
+
+/**
+ *  请求---(无限轮播数据)
+ */
+- (void)requestCycleDataFinishBlock:(MyBlock)finishCallback
+{
+    
+    
+    [[AFHTTPSessionManager manager] GET:@"http://www.douyutv.com/api/v1/slide/6" parameters:@{@"version" : @"2.300"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        CJLog(@"CJRecommendViewModel------轮播器数据------%@",responseObject);
+        
+        // 1.将result转成字典
+        NSDictionary *resultDict = responseObject;
+        
+        // 2.根据data的Key,获取数组
+        NSArray *dataArray = [resultDict objectForKey:@"data"];
+        
+        // 3.获取主播数据
+        for (NSDictionary *dict in dataArray)
+        {
+            
+            CJCycleModel *cycleModel = [CJCycleModel mj_objectWithKeyValues:dict];
+            [self.cycleModels addObject:cycleModel];
+        }
+        
+        finishCallback();
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        CJLog(@"CJRecommendViewModel------轮播器部分---Error: %@", error);
+    }];
+    
+    
+}
 
 
 

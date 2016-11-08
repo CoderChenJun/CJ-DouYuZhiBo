@@ -25,17 +25,9 @@ typedef NS_ENUM(NSInteger, MethodType) {
 
 
 
-
-/*
-+ (void)requestDataWithMethodType:(MethodType)type URLString:(NSString *)urlstring parameters:(NSDictionary *)parameters Success:(MyBlock)successBlock Error:(MyBlock)errorBlock;
-*/
++ (void)requestDataWithMethodType:(MethodType)type URLString:(nonnull NSString *)urlstring parameters:(nullable id)parameters Success:(nullable void (^)(id _Nullable result))DIYsuccess failure:(nullable void (^)(NSError  * _Nullable error))DIYfailure;
 
 
-
-
-+ (void)requestDataWithMethodType:(MethodType)type
-                        URLString:(nullable NSString *)urlstring parameters:(nullable id)parameters
-                          Success:(nullable void (^)(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure;
 
 
  

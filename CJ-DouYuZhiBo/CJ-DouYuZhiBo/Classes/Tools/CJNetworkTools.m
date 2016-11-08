@@ -10,27 +10,30 @@
 #import "AFNetworking.h"
 
 
-
-
-
 @implementation CJNetworkTools
-/*
-- (NSURLSessionDataTask *)GET:(NSString *)URLString
-                   parameters:(id)parameters
-                     progress:(void (^)(NSProgress * _Nonnull))downloadProgress
-                      success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
-                      failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
-
-*/
 
 
 
 
-+ (void)requestDataWithMethodType:(MethodType)type
-                        URLString:(nullable NSString *)urlstring parameters:(nullable id)parameters
-                          Success:(nullable void (^)(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure
+
+
++ (void)requestDataWithMethodType:(MethodType)type URLString:(nonnull NSString *)urlstring parameters:(nullable id)parameters Success:(nullable void (^)(id _Nullable))DIYsuccess failure:(nullable void (^)(NSError  * _Nullable))DIYfailure
 {
     
+    
+    if (type == MethodTypeGET) {
+        
+        [[AFHTTPSessionManager manager] GET:urlstring parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            DIYsuccess(responseObject);
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            DIYsuccess(error);
+            
+        }];
+        
+    }
 }
 
 

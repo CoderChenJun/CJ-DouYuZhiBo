@@ -12,16 +12,6 @@
 
 @interface CJCollectionNormalCell : CJCollectionBaseCell
 
-//@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-//@property (weak, nonatomic) IBOutlet UIButton *onlineBtn;
-//@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roomNameLabel;
-
-
-
-//@property (nonatomic, strong) CJAnchorModel *anchorModel;
-
-
-
 
 @end

@@ -11,7 +11,7 @@
 
 #import "CJRecommendCycleView.h"// 轮播器View
 
-
+#import "CJRecommendGameView.h"// 游戏推荐View
 
 #import "CJRecommendViewModel.h"// MVVM设计模式---ViewModel
 #import "CJCollectionNormalCell.h"
@@ -33,6 +33,7 @@
 
 
 #define CJRecommendCycleViewH (CJUIScreenW * 3 / 8)
+#define CJRecommendGameViewH 90
 
 
 
@@ -52,6 +53,10 @@
 @property (nonatomic, strong) CJRecommendCycleView *recommendCycleView;
 
 
+@property (nonatomic, strong) CJRecommendGameView *recommendGameView;
+
+
+
 @end
 
 
@@ -63,12 +68,26 @@
 
 
 
+- (CJRecommendGameView *)recommendGameView
+{
+    if (_recommendGameView == nil)
+    {
+        _recommendGameView = [CJRecommendGameView recommendGameView];
+        
+        _recommendGameView.frame = CGRectMake(0, -CJRecommendGameViewH, CJUIScreenW, CJRecommendGameViewH);
+        
+    }
+    return _recommendGameView;
+}
+
+
+
 - (CJRecommendCycleView *)recommendCycleView
 {
     if (_recommendCycleView == nil)
     {
         _recommendCycleView = [CJRecommendCycleView recommendCycleView];
-        _recommendCycleView.frame =CGRectMake(0, -CJRecommendCycleViewH, CJUIScreenW, CJRecommendCycleViewH);
+        _recommendCycleView.frame =CGRectMake(0, -(CJRecommendCycleViewH + CJRecommendGameViewH), CJUIScreenW, CJRecommendCycleViewH);
     }
     return _recommendCycleView;
 }
@@ -170,8 +189,13 @@
     [self.collectionView addSubview:self.recommendCycleView];
     
     
+    // 3.将_recommendGameView添加到_collectionView
+    [self.collectionView addSubview:self.recommendGameView];
+    
+    
+    
     // 3.设置_collectionView的内边距---为了让_recommendCycleView显示出来
-    self.collectionView.contentInset = UIEdgeInsetsMake(CJRecommendCycleViewH, 0, 0, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(CJRecommendCycleViewH + CJRecommendGameViewH, 0, 0, 0);
     
 }
 
@@ -206,12 +230,20 @@
         CJLog(@"CJRecommendViewController------轮播器数据请求完成");
         
         self.recommendCycleView.cycleModels = self.recommendViewModel.cycleModels;
+        
     }];
     
     
     // 2.请求---推荐数据
     [self.recommendViewModel requestDataFinishBlock:^{
+        
+        // 2.1.刷新展示 推荐数据
         [self.collectionView reloadData];
+        
+        
+        // 2.2.将数据传递给GameView
+        self.recommendGameView.groups = self.recommendViewModel.anchorGroups;
+        
     }];
     
     

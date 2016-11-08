@@ -35,6 +35,10 @@
 		CC0D73D71DD1AAEB005CE9D9 /* CJCycleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73D61DD1AAEB005CE9D9 /* CJCycleModel.m */; };
 		CC0D73DB1DD1B26E005CE9D9 /* CJCollectionCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */; };
 		CC0D73DC1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */; };
+		CC0D73DF1DD1C8DA005CE9D9 /* CJRecommendGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73DE1DD1C8DA005CE9D9 /* CJRecommendGameView.m */; };
+		CC0D73E11DD1C8F9005CE9D9 /* CJRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73E01DD1C8F9005CE9D9 /* CJRecommendGameView.xib */; };
+		CC0D73E51DD1D033005CE9D9 /* CJCollectionGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */; };
+		CC0D73E61DD1D033005CE9D9 /* CJCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */; };
 		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
 		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
 		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
@@ -143,6 +147,12 @@
 		CC0D73D81DD1B26E005CE9D9 /* CJCollectionCycleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionCycleCell.h; sourceTree = "<group>"; };
 		CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionCycleCell.m; sourceTree = "<group>"; };
 		CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionCycleCell.xib; sourceTree = "<group>"; };
+		CC0D73DD1DD1C8DA005CE9D9 /* CJRecommendGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendGameView.h; sourceTree = "<group>"; };
+		CC0D73DE1DD1C8DA005CE9D9 /* CJRecommendGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendGameView.m; sourceTree = "<group>"; };
+		CC0D73E01DD1C8F9005CE9D9 /* CJRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRecommendGameView.xib; sourceTree = "<group>"; };
+		CC0D73E21DD1D033005CE9D9 /* CJCollectionGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionGameCell.h; sourceTree = "<group>"; };
+		CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionGameCell.m; sourceTree = "<group>"; };
+		CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionGameCell.xib; sourceTree = "<group>"; };
 		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
 		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
 		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -532,6 +542,12 @@
 				CC0D73D81DD1B26E005CE9D9 /* CJCollectionCycleCell.h */,
 				CC0D73D91DD1B26E005CE9D9 /* CJCollectionCycleCell.m */,
 				CC0D73DA1DD1B26E005CE9D9 /* CJCollectionCycleCell.xib */,
+				CC0D73DD1DD1C8DA005CE9D9 /* CJRecommendGameView.h */,
+				CC0D73DE1DD1C8DA005CE9D9 /* CJRecommendGameView.m */,
+				CC0D73E01DD1C8F9005CE9D9 /* CJRecommendGameView.xib */,
+				CC0D73E21DD1D033005CE9D9 /* CJCollectionGameCell.h */,
+				CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */,
+				CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -783,11 +799,13 @@
 				CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */,
 				CC6C69B81DCC20160040A703 /* Home.storyboard in Resources */,
 				CC0D73BF1DD164E6005CE9D9 /* MJRefresh.bundle in Resources */,
+				CC0D73E11DD1C8F9005CE9D9 /* CJRecommendGameView.xib in Resources */,
 				CC6C69C31DCC21BB0040A703 /* Profile.storyboard in Resources */,
 				CC6C69C91DCC227E0040A703 /* Follow.storyboard in Resources */,
 				CC58AED21DD00B18003A5787 /* CJCollectionPrettyCell.xib in Resources */,
 				CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */,
 				CC58AECD1DD00B07003A5787 /* CJCollectionNormalCell.xib in Resources */,
+				CC0D73E61DD1D033005CE9D9 /* CJCollectionGameCell.xib in Resources */,
 				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
 				CCAB12D61DD0519200ECDF78 /* Info.plist in Resources */,
 				CC6C69B11DCC1BAF0040A703 /* Assets.xcassets in Resources */,
@@ -806,6 +824,7 @@
 			files = (
 				CC6C69F81DCC38520040A703 /* CJPageTitleView.m in Sources */,
 				CC0D73BE1DD164E6005CE9D9 /* MJRefreshStateHeader.m in Sources */,
+				CC0D73DF1DD1C8DA005CE9D9 /* CJRecommendGameView.m in Sources */,
 				CC0D73B61DD164E6005CE9D9 /* MJRefreshAutoGifFooter.m in Sources */,
 				CC0D73CC1DD17E94005CE9D9 /* CJCollectionNormalCell.m in Sources */,
 				CC0D73C91DD17E36005CE9D9 /* CJCollectionBaseCell.m in Sources */,
@@ -819,6 +838,7 @@
 				CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */,
 				CCAB12E01DD0519200ECDF78 /* NSString+MJExtension.m in Sources */,
 				CC0D73B11DD164E6005CE9D9 /* MJRefreshAutoFooter.m in Sources */,
+				CC0D73E51DD1D033005CE9D9 /* CJCollectionGameCell.m in Sources */,
 				CC6C69B51DCC1BAF0040A703 /* main.m in Sources */,
 				CC6C69E71DCC23A40040A703 /* CJMainViewController.m in Sources */,
 				CCAB12E61DD0577700ECDF78 /* CJAnchorModel.m in Sources */,

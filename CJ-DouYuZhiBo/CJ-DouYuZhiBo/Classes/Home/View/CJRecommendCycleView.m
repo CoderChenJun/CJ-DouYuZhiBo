@@ -143,7 +143,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 #warning mark - 乘以1000,实现无限轮播
-    return (self.cycleModels.count) * 10000;
+    return ((self.cycleModels.count) * 10000) ? ((self.cycleModels.count) * 10000) : 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -151,7 +151,7 @@
     
     CJCollectionCycleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJRecommendCycleViewCellID forIndexPath:indexPath];
     
-    cell.cycleModel = self.cycleModels[indexPath.row % self.cycleModels.count];
+    cell.cycleModel = self.cycleModels[indexPath.item % self.cycleModels.count];
     
     return cell;
 }

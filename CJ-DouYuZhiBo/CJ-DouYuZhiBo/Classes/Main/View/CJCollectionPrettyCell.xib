@@ -18,26 +18,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-SP-GEQ">
-                        <rect key="frame" x="0.0" y="216" width="46" height="14"/>
+                        <rect key="frame" x="149" y="216" width="46" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="14" id="Xeg-nm-8vo"/>
+                            <constraint firstAttribute="height" constant="14" id="VJ0-7a-LYR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="龙港市" image="ico_location">
                             <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-32-8fg">
-                        <rect key="frame" x="0.0" y="195" width="190" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="16" id="VDO-qR-oto"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="iMI-Qg-8sl">
-                        <rect key="frame" x="0.0" y="0.0" width="195" height="190"/>
+                        <rect key="frame" x="0.0" y="0.0" width="195" height="211"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="5"/>
@@ -46,11 +37,11 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjS-Dz-o2a">
-                        <rect key="frame" x="130" y="5" width="60" height="20"/>
+                        <rect key="frame" x="130" y="5" width="60" height="16"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="BjB-8O-3CO"/>
-                            <constraint firstAttribute="height" constant="20" id="I1J-iN-urx"/>
+                            <constraint firstAttribute="height" constant="16" id="I1J-iN-urx"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="8888在线">
@@ -63,20 +54,28 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-32-8fg">
+                        <rect key="frame" x="0.0" y="216" width="64.5" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="aVb-0v-ykq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="iWP-SP-GEQ" secondAttribute="bottom" constant="10" id="6f9-fc-zcK"/>
-                <constraint firstItem="iMI-Qg-8sl" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="78F-lU-yCg"/>
-                <constraint firstItem="iWP-SP-GEQ" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="K8L-jF-NjL"/>
+                <constraint firstAttribute="trailing" secondItem="iWP-SP-GEQ" secondAttribute="trailing" id="3BI-eo-0Lo"/>
+                <constraint firstItem="6Rn-32-8fg" firstAttribute="top" secondItem="iMI-Qg-8sl" secondAttribute="bottom" constant="5" id="6QH-Am-H3W"/>
+                <constraint firstItem="iMI-Qg-8sl" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="8H6-ze-laT"/>
+                <constraint firstAttribute="trailing" secondItem="iMI-Qg-8sl" secondAttribute="trailing" id="KKb-1x-VnT"/>
                 <constraint firstItem="EjS-Dz-o2a" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" constant="5" id="PA3-fe-ysK"/>
                 <constraint firstAttribute="trailing" secondItem="EjS-Dz-o2a" secondAttribute="trailing" constant="5" id="QRI-ye-8Fz"/>
-                <constraint firstItem="6Rn-32-8fg" firstAttribute="top" secondItem="iMI-Qg-8sl" secondAttribute="bottom" constant="5" id="X98-Ax-4yk"/>
-                <constraint firstAttribute="trailing" secondItem="6Rn-32-8fg" secondAttribute="trailing" constant="5" id="frm-sM-olf"/>
-                <constraint firstItem="iMI-Qg-8sl" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" id="gqJ-Sd-RX5"/>
-                <constraint firstItem="6Rn-32-8fg" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="qHn-xy-gza"/>
-                <constraint firstItem="iWP-SP-GEQ" firstAttribute="top" secondItem="6Rn-32-8fg" secondAttribute="bottom" constant="5" id="vGl-1Z-yKY"/>
-                <constraint firstAttribute="trailing" secondItem="iMI-Qg-8sl" secondAttribute="trailing" id="vag-nX-hQU"/>
+                <constraint firstItem="6Rn-32-8fg" firstAttribute="leading" secondItem="OkQ-sL-4AS" secondAttribute="leading" id="QTR-Wd-TnJ"/>
+                <constraint firstItem="iMI-Qg-8sl" firstAttribute="top" secondItem="OkQ-sL-4AS" secondAttribute="top" id="UOd-Ae-L1u"/>
+                <constraint firstAttribute="bottom" secondItem="iWP-SP-GEQ" secondAttribute="bottom" constant="10" id="eF5-LZ-tOy"/>
+                <constraint firstAttribute="bottom" secondItem="6Rn-32-8fg" secondAttribute="bottom" constant="10" id="p6v-6r-QEn"/>
             </constraints>
             <size key="customSize" width="195" height="240"/>
             <connections>

@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *onlineBtn;
 
 
+@property (nonatomic, strong) CJAnchorModel *anchorModel;
+
 
 
 @end

@@ -214,25 +214,30 @@
 - (void)titleLabelClick:(UITapGestureRecognizer *)tapGes
 {
     
+    
+    
     // 1.获取当前label
     UILabel *currentLabel = (UILabel *)(tapGes.view);
     
+    // 2.如果是重复点击同一个title,那么直接返回
+    if (currentLabel.tag == self.currentIndex) { return; }
     
-    // 2.获取之前的label
+    
+    // 3.获取之前的label
     UILabel *oldLabel = self.titleLabels[self.currentIndex];
     
     
-    // 3.切换文字的颜色
+    // 4.切换文字的颜色
     currentLabel.textColor = CJColor(CJSelectColor0, CJSelectColor1, CJSelectColor2);
     oldLabel.textColor = CJColor(CJNormalColor0, CJNormalColor1, CJNormalColor2);
 
     
     
-    // 4.保存最新label的下标值
+    // 5.保存最新label的下标值
     self.currentIndex =currentLabel.tag;
     
     
-    // 5.滚动条位置发生改变
+    // 6.滚动条位置发生改变
     CGFloat scrollLineX = currentLabel.tag * self.scrollLine.frame.size.width;
     
     [UIView animateWithDuration:0.15 animations:^{
@@ -247,8 +252,8 @@
     
     
     
-    // 6.传递数据给上一个控制器(CJHomeViewController)
-    // 6.通知代理
+    // 7.传递数据给上一个控制器(CJHomeViewController)
+    // 7.通知代理
     if ([self.delegate respondsToSelector:@selector(pageTitleView:selectedIndex:)])
     {
         [self.delegate pageTitleView:self selectedIndex:self.currentIndex];

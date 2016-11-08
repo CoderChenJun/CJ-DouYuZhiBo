@@ -10,6 +10,8 @@
 #import "CJCollectionHeaderView.h"
 #import "CJCollectionNormalCell.h"
 #import "CJCollectionPrettyCell.h"
+#import "CJCollectionBaseCell.h"
+
 
 #import "CJRecommendViewModel.h"// MVVM设计模式---ViewModel
 #import "CJAnchorGroup.h"
@@ -18,7 +20,8 @@
 #define CJItemMargin 10
 #define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
 #define CJNormalItemH (CJItemW * 3 / 4)
-#define CJPrettyItemH (CJItemW * 4 / 3)
+//#define CJPrettyItemH (CJItemW * 4 / 3)
+#define CJPrettyItemH (CJItemW * 8 / 7)
 #define CJHeaderViewH 50
 
 #define CJNormalCellID @"CJNormalCellID"
@@ -70,6 +73,7 @@
         _collectionView.delegate = self;
         
         
+        
         [_collectionView registerNib:[UINib nibWithNibName:@"CJCollectionNormalCell" bundle:nil] forCellWithReuseIdentifier:CJNormalCellID];
         
         [_collectionView registerNib:[UINib nibWithNibName:@"CJCollectionPrettyCell" bundle:nil] forCellWithReuseIdentifier:CJPrettyCellID];
@@ -110,17 +114,15 @@
 {
     [super viewDidLoad];
     
+    
     // 1.设置UI界面
     [self setupUI];
-    
-    
-    
-    
-    
     
     // 2.发送网络请求
     [self loadData];
     
+    
+//    [self example21];
     
     
 }
@@ -139,18 +141,35 @@
 
 
 
+//- (void)example21
+//{
+////    __weak __typeof(self) weakSelf = self;
+//    
+//    // 下拉刷新
+//    self.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        [self loadData];
+//    }];
+//    
+//    [self.collectionView.mj_header beginRefreshing];
+//}
+
+
+
+
+
 /**
  *  发送网络请求
  */
 - (void)loadData
 {
-    
     [self.recommendViewModel requestDataFinishBlock:^{
         
         [self.collectionView reloadData];
         
     }];
     
+//    // 让刷新控件停止显示刷新状态
+//    [self.collectionView.mj_header endRefreshing];
 }
 
 
@@ -196,35 +215,34 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    // 0.取出模型对象
+    
+    // 1.取出模型对象
     CJAnchorGroup *anchorGroup = self.recommendViewModel.anchorGroups[indexPath.section];
+    
     CJAnchorModel *anchorModel = anchorGroup.anchorModels[indexPath.item];
     
     
+    // 2.定义cell
+    CJCollectionBaseCell *cell;
     
     
-    
-    
-    
-    // 1.取出cell
+    // 3.取出cell
     if (indexPath.section == 1)
     {
-        CJCollectionPrettyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJPrettyCellID forIndexPath:indexPath];
-        
-        cell.anchorModel = anchorModel;
-        
-        return cell;
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJPrettyCellID forIndexPath:indexPath];
     }
     else
     {
-        CJCollectionNormalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
-        
-        cell.anchorModel = anchorModel;
-        
-        return cell;
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
     }
     
     
+    // 4.将模型赋值给cell
+    cell.anchorModel = anchorModel;
+    
+    
+    
+    return cell;
     
 }
 

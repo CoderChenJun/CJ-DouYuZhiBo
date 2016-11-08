@@ -68,6 +68,12 @@
  */
 - (void)requestDataFinishBlock:(MyBlock)finishCallback
 {
+//    [self.bigDataGroup.anchorModels removeAllObjects];
+//    [self.prettyGroup.anchorModels removeAllObjects];
+//    [self.anchorGroups removeAllObjects];
+    
+    
+    
     // 1.定义参数
     NSMutableDictionary *parameters =[NSMutableDictionary dictionary];
     [parameters setValue:[NSDate getCurrentTimeFrom1970] forKey:@"time"];
@@ -98,7 +104,7 @@
         
         // 3.便利数组,获取字典,并且将字典转成模型对象
         // 3.1.设置组属性
-        self.bigDataGroup.tag_name = @"热门";
+        self.bigDataGroup.tag_name = @"最热";
         self.bigDataGroup.icon_name = @"home_header_hot";
         
         // 3.2.获取主播数据
@@ -107,7 +113,7 @@
             CJAnchorModel *anchorModel = [CJAnchorModel mj_objectWithKeyValues:dict];
             [self.bigDataGroup.anchorModels addObject:anchorModel];
         }
-
+        
         
         // 3.3.获取到数据  离开组
         dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
@@ -170,11 +176,11 @@
     
     
     
+    //    http://capi.douyucdn.cn/api/v1/getbigDataRoom?limit=4&offset=0&time=1478573658
     
+    //    http://capi.douyucdn.cn/api/v1/getVerticalRoom?limit=4&offset=0&time=1478573658
     
-    
-    
-    
+    //    http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1478573658
     
     
 #pragma mark - 5.请求后2-12部分游戏数据
@@ -182,15 +188,7 @@
     
     dispatch_group_enter(dispatchGroup);// 发出请求进入组
     
-    
-    
-    CJLog(@"%@",parameters);
-    
     [[AFHTTPSessionManager manager] GET:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        
-//        CJLog(@"%@",responseObject);
-        
-        
         
         // 1.将result转成字典
         NSDictionary *resultDict = responseObject;
@@ -203,25 +201,21 @@
         {
             CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
             [self.anchorGroups addObject:anchorGroup];
+            
+            
+//#warning mark - 把空组移除
+//            if (anchorGroup.room_list.count == 0) {
+//                [self.anchorGroups removeLastObject];
+//            }
+            
+            
         }
         
         
-//        // 4.查看打印结果
-//        for (CJAnchorGroup *anchorGroup in self.anchorGroups)
-//        {
-//            CJLog(@"------------------------------");
-//            CJLog(@"CJRecommendViewModel------tag_name=%@",anchorGroup.tag_name);
-//
-//            for (CJAnchorModel *anchorModel in anchorGroup.anchorModels)
-//            {
-//                CJLog(@"CJRecommendViewModel------nickname : %@",anchorModel.nickname);
-//            }
-//        }
         
         
         // 4.获取到数据  离开组
         dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
-        
         
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {

@@ -23,7 +23,7 @@
         }
         else
         {
-            self.titleLabel.text = @"热门";
+            self.titleLabel.text = @"最热";
         }
         
         if (anchorGroup.icon_name)
@@ -32,7 +32,7 @@
         }
         else
         {
-            self.iconImageView.image = [UIImage imageNamed:@"home_header_hot"];
+            self.iconImageView.image = [UIImage imageNamed:@"home_header_normal"];
         }
     }
 }

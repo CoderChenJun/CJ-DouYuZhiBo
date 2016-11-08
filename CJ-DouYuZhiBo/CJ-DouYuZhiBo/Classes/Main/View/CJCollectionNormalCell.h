@@ -19,7 +19,7 @@
 
 
 
-@property (nonatomic, strong) CJAnchorModel *anchorModel;
+//@property (nonatomic, strong) CJAnchorModel *anchorModel;
 
 
 

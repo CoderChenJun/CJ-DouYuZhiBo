@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
 
 
-@property (nonatomic, strong) CJAnchorModel *anchorModel;
+//@property (nonatomic, strong) CJAnchorModel *anchorModel;
 
 
 

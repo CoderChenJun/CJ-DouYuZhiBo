@@ -26,13 +26,12 @@
 
 
 
-/// 组显示的图标
+/// 游戏对应的图标
 @property (nonatomic, strong) NSString *icon_url;
 
 
 
-
-
+/// 推荐collection的headerView的图标
 @property (nonatomic, strong) NSString *icon_name;
 
 

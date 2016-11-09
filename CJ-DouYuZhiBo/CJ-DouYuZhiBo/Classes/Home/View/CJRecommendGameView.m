@@ -14,12 +14,16 @@
 
 #define CJCollectionGameCellW 80
 #define CJCollectionGameCellH 90
+#define CJCollectionGameViewEdgeInsetsMargin 10
+
 
 @interface CJRecommendGameView()<UICollectionViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+
+@property (nonatomic, strong) NSMutableArray *tempGroups;
 
 @end
 
@@ -42,9 +46,52 @@
     {
         _groups = groups;
         
-        [self.collectionView reloadData];
+        self.tempGroups = [NSMutableArray arrayWithArray:groups];
+        
+        [self reloadTempGroups];
+        
+//        // 1.移除前两组数据
+//        [_groups removeObjectAtIndex:0];
+//        [_groups removeObjectAtIndex:0];
+//        
+//        // 2.添加 "更多" 组
+//        CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
+//        moreAnchorGroup.tag_name = @"更多";
+//        [_groups addObject:moreAnchorGroup];
+//        
+//        // 3.刷新表格
+//        [self.collectionView reloadData];
+        
     }
 }
+
+- (NSMutableArray *)tempGroups
+{
+    if (_tempGroups == nil)
+    {
+        _tempGroups = [NSMutableArray array];
+    }
+    return _tempGroups;
+}
+
+- (void)reloadTempGroups
+{
+    // 1.移除前两组数据
+    [_tempGroups removeObjectAtIndex:0];
+    [_tempGroups removeObjectAtIndex:0];
+
+    // 2.添加 "更多" 组
+    CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
+    moreAnchorGroup.tag_name = @"更多";
+    [_tempGroups addObject:moreAnchorGroup];
+
+    // 3.刷新表格
+    [self.collectionView reloadData];
+}
+
+
+
+
 
 
 
@@ -64,8 +111,6 @@
     // 注册cell
     [self.collectionView registerNib:[UINib nibWithNibName:@"CJCollectionGameCell" bundle:nil] forCellWithReuseIdentifier:CJCollectionGameCellID];
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CJCollectionGameCellID];
-    
 }
 
 
@@ -83,8 +128,8 @@
     layout.minimumInteritemSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-//    self.collectionView.pagingEnabled = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, CJCollectionGameViewEdgeInsetsMargin, 0, CJCollectionGameViewEdgeInsetsMargin);
     
 }
 
@@ -105,7 +150,11 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return (self.groups.count) ? (self.groups.count) : 0;
+    
+//    return (self.groups.count) ? (self.groups.count) : 0;
+    
+    return (self.tempGroups.count) ? (self.tempGroups.count) : 0;
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -113,9 +162,9 @@
     
     CJCollectionGameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJCollectionGameCellID forIndexPath:indexPath];
     
-    cell.backgroundColor = (indexPath.item % 2) ? [UIColor redColor] : [UIColor blueColor];
-    
 //    cell.group = self.groups[indexPath.item];
+    
+    cell.group = self.tempGroups[indexPath.item];
     
     return cell;
     

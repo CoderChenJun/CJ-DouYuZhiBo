@@ -41,6 +41,8 @@
         
         self.titleLabel.text = _group.tag_name;
         
+        [self.iconImageView setImageWithURL:[NSURL URLWithString:self.group.icon_url] placeholderImage:[UIImage imageNamed:@"home_more_btn"]];
+        
     }
 }
 

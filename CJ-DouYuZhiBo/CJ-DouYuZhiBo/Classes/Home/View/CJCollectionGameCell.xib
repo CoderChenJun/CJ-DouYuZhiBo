@@ -20,12 +20,15 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-游戏推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-Od-ZcA">
                         <rect key="frame" x="5" y="65" width="70" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="hPj-UL-4e2"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-hZ-uER">
-                        <rect key="frame" x="15.5" y="10" width="50" height="50"/>
+                        <rect key="frame" x="15" y="10" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="YAK-hZ-uER" secondAttribute="height" multiplier="1:1" id="Y3n-0U-y3f"/>
                         </constraints>
@@ -50,7 +53,7 @@
                 <outlet property="iconImageView" destination="YAK-hZ-uER" id="f9q-TN-TUU"/>
                 <outlet property="titleLabel" destination="0tg-Od-ZcA" id="BnE-cD-xtW"/>
             </connections>
-            <point key="canvasLocation" x="-231" y="35"/>
+            <point key="canvasLocation" x="-335" y="-12"/>
         </collectionViewCell>
     </objects>
 </document>

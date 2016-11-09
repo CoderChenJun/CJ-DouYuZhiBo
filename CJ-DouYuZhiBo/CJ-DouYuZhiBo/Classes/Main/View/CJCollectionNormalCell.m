@@ -16,6 +16,7 @@
 {
     // 1.将属性传递给父类
     [super setAnchorModel:anchorModel];
+        
     
     // 2.房间名称(特有属性)
     self.roomNameLabel.text = anchorModel.room_name;

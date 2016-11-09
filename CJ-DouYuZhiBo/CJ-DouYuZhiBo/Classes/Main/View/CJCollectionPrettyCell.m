@@ -16,6 +16,8 @@
     // 1.将属性传递给父类
     [super setAnchorModel:anchorModel];
     
+    
+    
     // 3.所在的城市
     [self.cityBtn setTitle:anchorModel.anchor_city forState:UIControlStateNormal];
     

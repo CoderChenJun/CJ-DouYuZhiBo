@@ -293,8 +293,11 @@
     
     
     CJAnchorGroup *group = self.recommendViewModel.anchorGroups[section];
+   
+#warning mark - 如果count为基数,则减1,用双数表示
+    return (group.anchorModels.count % 2) ? (group.anchorModels.count - 1) : (group.anchorModels.count);
     
-    return group.anchorModels.count;
+//    return group.anchorModels.count;
     
 }
 

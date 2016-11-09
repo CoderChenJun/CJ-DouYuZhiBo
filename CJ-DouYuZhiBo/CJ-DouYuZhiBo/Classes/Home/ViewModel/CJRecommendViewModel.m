@@ -214,14 +214,13 @@
         for (NSDictionary *dict in dataArray)
         {
             CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
+            
             [self.anchorGroups addObject:anchorGroup];
             
-            
-//#warning mark - 把空组移除
-//            if (anchorGroup.room_list.count == 0) {
-//                [self.anchorGroups removeLastObject];
-//            }
-            
+#warning mark - 把空组移除
+            if ([anchorGroup.tag_name isEqualToString:@"颜值"]) {
+                [self.anchorGroups removeLastObject];
+            }
             
         }
         
@@ -272,8 +271,6 @@
     
     
     [[AFHTTPSessionManager manager] GET:@"http://www.douyutv.com/api/v1/slide/6" parameters:@{@"version" : @"2.300"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        CJLog(@"CJRecommendViewModel------轮播器数据------%@",responseObject);
         
         // 1.将result转成字典
         NSDictionary *resultDict = responseObject;

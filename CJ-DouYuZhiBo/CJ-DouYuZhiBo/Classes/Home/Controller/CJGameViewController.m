@@ -157,9 +157,13 @@
     
     
     // 4.将模型赋值给cell
+    
+    
     cell.baseGame = self.gameViewModel.gameModels[indexPath.item];
     
 //    cell.backgroundColor = [UIColor randomColor];
+    
+    
     
     return cell;
     

@@ -12,9 +12,6 @@
 typedef void(^MyBlock)();
 
 
-
-
-
 @interface CJRecommendViewModel : NSObject
 
 

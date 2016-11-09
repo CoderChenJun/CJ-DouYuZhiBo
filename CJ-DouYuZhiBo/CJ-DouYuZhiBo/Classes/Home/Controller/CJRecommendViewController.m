@@ -185,6 +185,7 @@
     // 1.将_collectionView添加到控制器的View中
     [self.view addSubview:self.collectionView];
     
+    
     // 2.将_recommendCycleView添加到_collectionView
     [self.collectionView addSubview:self.recommendCycleView];
     
@@ -193,8 +194,7 @@
     [self.collectionView addSubview:self.recommendGameView];
     
     
-    
-    // 3.设置_collectionView的内边距---为了让_recommendCycleView显示出来
+    // 4.设置_collectionView的内边距---为了让_recommendCycleView显示出来
     self.collectionView.contentInset = UIEdgeInsetsMake(CJRecommendCycleViewH + CJRecommendGameViewH, 0, 0, 0);
     
 }
@@ -242,7 +242,8 @@
         
         
         // 2.2.将数据传递给GameView
-        self.recommendGameView.groups = self.recommendViewModel.anchorGroups;
+//        self.recommendGameView.groups = self.recommendViewModel.anchorGroups;
+        self.recommendGameView.baseGames = self.recommendViewModel.anchorGroups;
         
     }];
     
@@ -307,7 +308,6 @@
     
     // 1.取出模型对象
     CJAnchorGroup *anchorGroup = self.recommendViewModel.anchorGroups[indexPath.section];
-    
     CJAnchorModel *anchorModel = anchorGroup.anchorModels[indexPath.item];
     
     

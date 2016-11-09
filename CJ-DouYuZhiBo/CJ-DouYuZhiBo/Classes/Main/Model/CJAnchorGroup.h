@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CJBaseGameModel.h"
 
-
-@interface CJAnchorGroup : NSObject
+@interface CJAnchorGroup : CJBaseGameModel
 
 
 @property (nonatomic, strong) NSMutableArray *anchorModels;
@@ -21,13 +21,13 @@
 
 
 
-/// 该组的标题
-@property (nonatomic, strong) NSString *tag_name;
+///// 该组的标题
+//@property (nonatomic, strong) NSString *tag_name;
 
 
 
-/// 游戏对应的图标
-@property (nonatomic, strong) NSString *icon_url;
+///// 游戏对应的图标
+//@property (nonatomic, strong) NSString *icon_url;
 
 
 

@@ -40,30 +40,50 @@
 
 
 
-- (void)setGroups:(NSMutableArray *)groups
+//- (void)setGroups:(NSMutableArray *)groups
+//{
+//    if (_groups != groups)
+//    {
+//        _groups = groups;
+//        
+//        self.tempGroups = [NSMutableArray arrayWithArray:groups];
+//        
+//        [self reloadTempGroups];
+//        
+////        // 1.移除前两组数据
+////        [_groups removeObjectAtIndex:0];
+////        [_groups removeObjectAtIndex:0];
+////        
+////        // 2.添加 "更多" 组
+////        CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
+////        moreAnchorGroup.tag_name = @"更多";
+////        [_groups addObject:moreAnchorGroup];
+////        
+////        // 3.刷新表格
+////        [self.collectionView reloadData];
+//        
+//    }
+//}
+
+
+- (void)setBaseGames:(NSMutableArray *)baseGames
 {
-    if (_groups != groups)
+    if (_baseGames != baseGames)
     {
-        _groups = groups;
+        _baseGames = baseGames;
         
-        self.tempGroups = [NSMutableArray arrayWithArray:groups];
+        self.tempGroups = [NSMutableArray arrayWithArray:baseGames];
         
         [self reloadTempGroups];
         
-//        // 1.移除前两组数据
-//        [_groups removeObjectAtIndex:0];
-//        [_groups removeObjectAtIndex:0];
-//        
-//        // 2.添加 "更多" 组
-//        CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
-//        moreAnchorGroup.tag_name = @"更多";
-//        [_groups addObject:moreAnchorGroup];
-//        
-//        // 3.刷新表格
-//        [self.collectionView reloadData];
-        
     }
 }
+
+
+
+
+
+
 
 - (NSMutableArray *)tempGroups
 {
@@ -162,9 +182,7 @@
     
     CJCollectionGameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJCollectionGameCellID forIndexPath:indexPath];
     
-//    cell.group = self.groups[indexPath.item];
-    
-    cell.group = self.tempGroups[indexPath.item];
+    cell.baseGame = self.tempGroups[indexPath.item];
     
     return cell;
     

@@ -5,13 +5,12 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CJCollectionGameCell">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CJCollectionGameCell">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -20,9 +19,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CJ-游戏推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-Od-ZcA">
                         <rect key="frame" x="5" y="65" width="70" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="hPj-UL-4e2"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +26,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-hZ-uER">
                         <rect key="frame" x="15" y="10" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="YAK-hZ-uER" secondAttribute="height" multiplier="1:1" id="Y3n-0U-y3f"/>
+                            <constraint firstAttribute="width" constant="50" id="2kk-uP-SH7"/>
+                            <constraint firstAttribute="height" constant="50" id="GFk-H4-Fdb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -39,21 +36,31 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozl-8x-bOR">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="xSm-8v-hy0"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="YAK-hZ-uER" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Fmm-Q9-Xgs"/>
-                <constraint firstItem="0tg-Od-ZcA" firstAttribute="top" secondItem="YAK-hZ-uER" secondAttribute="bottom" constant="5" id="Mbo-Dh-h2b"/>
-                <constraint firstAttribute="bottom" secondItem="0tg-Od-ZcA" secondAttribute="bottom" constant="10" id="he1-sW-CAw"/>
-                <constraint firstItem="YAK-hZ-uER" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="l8W-In-zAY"/>
-                <constraint firstItem="0tg-Od-ZcA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zdQ-Zq-ORF"/>
+                <constraint firstAttribute="trailing" secondItem="ozl-8x-bOR" secondAttribute="trailing" id="NsT-r4-jbY"/>
+                <constraint firstItem="0tg-Od-ZcA" firstAttribute="top" secondItem="YAK-hZ-uER" secondAttribute="bottom" constant="5" id="Q5f-8z-1Cc"/>
+                <constraint firstItem="0tg-Od-ZcA" firstAttribute="centerX" secondItem="YAK-hZ-uER" secondAttribute="centerX" id="Yte-Sl-soh"/>
+                <constraint firstItem="ozl-8x-bOR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d5M-8p-FKf"/>
+                <constraint firstItem="YAK-hZ-uER" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="e0d-fg-j4N"/>
+                <constraint firstAttribute="bottom" secondItem="ozl-8x-bOR" secondAttribute="bottom" constant="-1" id="wMI-bE-RpQ"/>
+                <constraint firstItem="YAK-hZ-uER" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-10" id="yFs-JN-JMW"/>
             </constraints>
             <size key="customSize" width="110" height="174"/>
             <connections>
                 <outlet property="iconImageView" destination="YAK-hZ-uER" id="f9q-TN-TUU"/>
                 <outlet property="titleLabel" destination="0tg-Od-ZcA" id="BnE-cD-xtW"/>
             </connections>
-            <point key="canvasLocation" x="-335" y="-12"/>
+            <point key="canvasLocation" x="-605" y="-106"/>
         </collectionViewCell>
     </objects>
 </document>

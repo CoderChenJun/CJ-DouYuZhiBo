@@ -12,10 +12,8 @@
 @interface CJCollectionGameCell()
 
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
 
 
 @end
@@ -33,21 +31,18 @@
 
 
 
-- (void)setGroup:(CJAnchorGroup *)group
+- (void)setBaseGame:(CJBaseGameModel *)baseGame
 {
-    if (_group != group)
+    if (_baseGame != baseGame)
     {
-        _group = group;
+        _baseGame = baseGame;
         
-        self.titleLabel.text = _group.tag_name;
+        self.titleLabel.text = _baseGame.tag_name;
         
-        [self.iconImageView setImageWithURL:[NSURL URLWithString:self.group.icon_url] placeholderImage:[UIImage imageNamed:@"home_more_btn"]];
+        [self.iconImageView setImageWithURL:[NSURL URLWithString:self.baseGame.icon_url] placeholderImage:[UIImage imageNamed:@"home_more_btn"]];
         
     }
 }
-
-
-
 
 
 - (void)awakeFromNib

@@ -11,8 +11,9 @@
 @interface CJRecommendGameView : UIView
 
 
-@property (nonatomic, strong) NSMutableArray *groups;
+//@property (nonatomic, strong) NSMutableArray *groups;
 
+@property (nonatomic, strong) NSMutableArray *baseGames;
 
 + (CJRecommendGameView *)recommendGameView;
 

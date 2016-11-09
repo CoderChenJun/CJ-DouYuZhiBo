@@ -7,9 +7,12 @@
 //
 
 #import "CJHomeViewController.h"
+
 #import "CJPageTitleView.h"
 #import "CJPageContentView.h"
+
 #import "CJRecommendViewController.h"
+#import "CJGameViewController.h"
 
 #define CJPageTitleViewH 40
 
@@ -41,8 +44,8 @@
         
         _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame Titles:titles];
         
-        //        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
-        //        _pageTitleView.titles = titles;
+//        _pageTitleView = [[CJPageTitleView alloc] initWithFrame:titleFrame];
+//        _pageTitleView.titles = titles;
         
         _pageTitleView.delegate = self;
         
@@ -69,7 +72,10 @@
         CJRecommendViewController *recommendVc = [[CJRecommendViewController alloc] init];
         [childVcs addObject:recommendVc];
         
-        for (int index = 0; index < 3; index++)
+        CJGameViewController *gameVc = [[CJGameViewController alloc] init];
+        [childVcs addObject:gameVc];
+        
+        for (int index = 0; index < 2; index++)
         {
             UIViewController *vc =[[UIViewController alloc] init];
             vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));

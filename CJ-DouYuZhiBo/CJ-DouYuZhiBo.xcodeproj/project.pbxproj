@@ -39,6 +39,9 @@
 		CC0D73E11DD1C8F9005CE9D9 /* CJRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73E01DD1C8F9005CE9D9 /* CJRecommendGameView.xib */; };
 		CC0D73E51DD1D033005CE9D9 /* CJCollectionGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */; };
 		CC0D73E61DD1D033005CE9D9 /* CJCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */; };
+		CC1916F81DD2FB7700C1A625 /* CJGameViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */; };
+		CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916FA1DD3016500C1A625 /* CJGameModel.m */; };
+		CC1916FE1DD3036A00C1A625 /* CJBaseGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916FD1DD3036A00C1A625 /* CJBaseGameModel.m */; };
 		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
 		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
 		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
@@ -75,6 +78,8 @@
 		CCAB12E01DD0519200ECDF78 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12D51DD0519200ECDF78 /* NSString+MJExtension.m */; };
 		CCAB12E31DD0526300ECDF78 /* CJAnchorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12E21DD0526300ECDF78 /* CJAnchorGroup.m */; };
 		CCAB12E61DD0577700ECDF78 /* CJAnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB12E51DD0577700ECDF78 /* CJAnchorModel.m */; };
+		CCAE11631DD2CADF00DE8FE8 /* CJGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE11621DD2CADF00DE8FE8 /* CJGameViewController.m */; };
+		CCAE11661DD2F5D800DE8FE8 /* UIColor+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE11651DD2F5D800DE8FE8 /* UIColor+CJ.m */; };
 		CCD8AB491DD0305200F62573 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB3D1DD0305200F62573 /* AFHTTPSessionManager.m */; };
 		CCD8AB4A1DD0305200F62573 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB401DD0305200F62573 /* AFNetworkReachabilityManager.m */; };
 		CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB421DD0305200F62573 /* AFSecurityPolicy.m */; };
@@ -153,6 +158,12 @@
 		CC0D73E21DD1D033005CE9D9 /* CJCollectionGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionGameCell.h; sourceTree = "<group>"; };
 		CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionGameCell.m; sourceTree = "<group>"; };
 		CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJCollectionGameCell.xib; sourceTree = "<group>"; };
+		CC1916F61DD2FB7700C1A625 /* CJGameViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGameViewModel.h; sourceTree = "<group>"; };
+		CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGameViewModel.m; sourceTree = "<group>"; };
+		CC1916F91DD3016500C1A625 /* CJGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGameModel.h; sourceTree = "<group>"; };
+		CC1916FA1DD3016500C1A625 /* CJGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGameModel.m; sourceTree = "<group>"; };
+		CC1916FC1DD3036A00C1A625 /* CJBaseGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseGameModel.h; sourceTree = "<group>"; };
+		CC1916FD1DD3036A00C1A625 /* CJBaseGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseGameModel.m; sourceTree = "<group>"; };
 		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
 		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
 		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -218,6 +229,10 @@
 		CCAB12E21DD0526300ECDF78 /* CJAnchorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAnchorGroup.m; sourceTree = "<group>"; };
 		CCAB12E41DD0577700ECDF78 /* CJAnchorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAnchorModel.h; sourceTree = "<group>"; };
 		CCAB12E51DD0577700ECDF78 /* CJAnchorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAnchorModel.m; sourceTree = "<group>"; };
+		CCAE11611DD2CADF00DE8FE8 /* CJGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGameViewController.h; sourceTree = "<group>"; };
+		CCAE11621DD2CADF00DE8FE8 /* CJGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGameViewController.m; sourceTree = "<group>"; };
+		CCAE11641DD2F5D800DE8FE8 /* UIColor+CJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CJ.h"; sourceTree = "<group>"; };
+		CCAE11651DD2F5D800DE8FE8 /* UIColor+CJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CJ.m"; sourceTree = "<group>"; };
 		CCD8AB3C1DD0305200F62573 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		CCD8AB3D1DD0305200F62573 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		CCD8AB3E1DD0305200F62573 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -441,6 +456,8 @@
 		CC6C69CC1DCC23210040A703 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC1916FC1DD3036A00C1A625 /* CJBaseGameModel.h */,
+				CC1916FD1DD3036A00C1A625 /* CJBaseGameModel.m */,
 				CCAB12E11DD0526300ECDF78 /* CJAnchorGroup.h */,
 				CCAB12E21DD0526300ECDF78 /* CJAnchorGroup.m */,
 				CCAB12E41DD0577700ECDF78 /* CJAnchorModel.h */,
@@ -517,6 +534,8 @@
 				CC6C69ED1DCC2A870040A703 /* CJHomeViewController.m */,
 				CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */,
 				CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */,
+				CCAE11611DD2CADF00DE8FE8 /* CJGameViewController.h */,
+				CCAE11621DD2CADF00DE8FE8 /* CJGameViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -526,6 +545,8 @@
 			children = (
 				CC0D73D51DD1AAEB005CE9D9 /* CJCycleModel.h */,
 				CC0D73D61DD1AAEB005CE9D9 /* CJCycleModel.m */,
+				CC1916F91DD3016500C1A625 /* CJGameModel.h */,
+				CC1916FA1DD3016500C1A625 /* CJGameModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,6 +655,8 @@
 				CC6C69F41DCC2FFD0040A703 /* UIImage+CJ.m */,
 				CCAB12BC1DD04A5B00ECDF78 /* NSDate+CJ.h */,
 				CCAB12BD1DD04A5B00ECDF78 /* NSDate+CJ.m */,
+				CCAE11641DD2F5D800DE8FE8 /* UIColor+CJ.h */,
+				CCAE11651DD2F5D800DE8FE8 /* UIColor+CJ.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -644,6 +667,8 @@
 				CCAB12B91DD0464000ECDF78 /* CJRecommendViewModel.h */,
 				CCAB12BA1DD0464000ECDF78 /* CJRecommendViewModel.m */,
 				CC0D73C51DD16CED005CE9D9 /* CJRecommendViewModel */,
+				CC1916F61DD2FB7700C1A625 /* CJGameViewModel.h */,
+				CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -828,6 +853,7 @@
 				CC0D73B61DD164E6005CE9D9 /* MJRefreshAutoGifFooter.m in Sources */,
 				CC0D73CC1DD17E94005CE9D9 /* CJCollectionNormalCell.m in Sources */,
 				CC0D73C91DD17E36005CE9D9 /* CJCollectionBaseCell.m in Sources */,
+				CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */,
 				CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,
 				CCAB12DF1DD0519200ECDF78 /* NSObject+MJProperty.m in Sources */,
@@ -836,6 +862,7 @@
 				CC0D73B31DD164E6005CE9D9 /* MJRefreshComponent.m in Sources */,
 				CC0D73BD1DD164E6005CE9D9 /* MJRefreshNormalHeader.m in Sources */,
 				CC6C69F21DCC2FBA0040A703 /* UIBarButtonItem+CJ.m in Sources */,
+				CC1916FE1DD3036A00C1A625 /* CJBaseGameModel.m in Sources */,
 				CCAB12E01DD0519200ECDF78 /* NSString+MJExtension.m in Sources */,
 				CC0D73B11DD164E6005CE9D9 /* MJRefreshAutoFooter.m in Sources */,
 				CC0D73E51DD1D033005CE9D9 /* CJCollectionGameCell.m in Sources */,
@@ -857,6 +884,7 @@
 				CCD8AB6E1DD0338500F62573 /* UIRefreshControl+AFNetworking.m in Sources */,
 				CC0D73C31DD164E6005CE9D9 /* UIScrollView+MJRefresh.m in Sources */,
 				CC0D73BB1DD164E6005CE9D9 /* MJRefreshBackStateFooter.m in Sources */,
+				CCAE11661DD2F5D800DE8FE8 /* UIColor+CJ.m in Sources */,
 				CCD8AB681DD0338500F62573 /* AFImageDownloader.m in Sources */,
 				CC58AED11DD00B18003A5787 /* CJCollectionPrettyCell.m in Sources */,
 				CCAB12DE1DD0519200ECDF78 /* NSObject+MJKeyValue.m in Sources */,
@@ -881,6 +909,7 @@
 				CCD8AB4A1DD0305200F62573 /* AFNetworkReachabilityManager.m in Sources */,
 				CC0D73B71DD164E6005CE9D9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				CCD8AB6F1DD0338500F62573 /* UIWebView+AFNetworking.m in Sources */,
+				CCAE11631DD2CADF00DE8FE8 /* CJGameViewController.m in Sources */,
 				CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */,
 				CC0D73D21DD18178005CE9D9 /* CJRecommendCycleView.m in Sources */,
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
@@ -889,6 +918,7 @@
 				CCD8AB491DD0305200F62573 /* AFHTTPSessionManager.m in Sources */,
 				CCAB12E31DD0526300ECDF78 /* CJAnchorGroup.m in Sources */,
 				CC0D73B41DD164E6005CE9D9 /* MJRefreshFooter.m in Sources */,
+				CC1916F81DD2FB7700C1A625 /* CJGameViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

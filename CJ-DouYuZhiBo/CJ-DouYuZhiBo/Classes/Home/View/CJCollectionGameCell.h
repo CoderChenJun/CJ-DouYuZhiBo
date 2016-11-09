@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CJAnchorGroup.h"
+#include "CJBaseGameModel.h"
 
 
 @interface CJCollectionGameCell : UICollectionViewCell
 
-@property (nonatomic, strong) CJAnchorGroup *group;
+@property (nonatomic, strong) CJBaseGameModel *baseGame;
 
 
 @end

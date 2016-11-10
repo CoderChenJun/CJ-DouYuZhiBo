@@ -28,7 +28,7 @@
 #define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
 #define CJNormalItemH (CJItemW * 3 / 4)
 //#define CJPrettyItemH (CJItemW * 4 / 3)
-#define CJPrettyItemH (CJItemW * 8 / 7)
+#define CJPrettyItemH (CJItemW * 7 / 6)
 #define CJHeaderViewH 50
 
 
@@ -169,7 +169,7 @@
     [self loadData];
     
     
-//    [self example21];
+//    [self refreshData];
     
     
 }
@@ -203,16 +203,18 @@
 
 
 
-//- (void)example21
+//- (void)refreshData
 //{
-////    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
 //    
 //    // 下拉刷新
-//    self.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//        [self loadData];
+//    weakSelf.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            // 结束刷新
+//            [weakSelf.collectionView.mj_header endRefreshing];
+//        });
 //    }];
-//    
-//    [self.collectionView.mj_header beginRefreshing];
 //}
 
 
@@ -242,20 +244,20 @@
         
         
         // 2.2.将数据传递给GameView
-//        self.recommendGameView.groups = self.recommendViewModel.anchorGroups;
-        self.recommendGameView.baseGames = self.recommendViewModel.anchorGroups;
+        // 2.2.1.移除前两组数据
+        NSMutableArray *tempGroups = [NSMutableArray arrayWithArray:self.recommendViewModel.anchorGroups];
+        [tempGroups removeObjectAtIndex:0];
+        [tempGroups removeObjectAtIndex:0];
+        
+        // 2.2.2.添加 "更多" 组
+        CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
+        moreAnchorGroup.tag_name = @"更多";
+        [tempGroups addObject:moreAnchorGroup];
+
+        // 2.2.3.将数据传递给GameView
+        self.recommendGameView.baseGames = tempGroups;
         
     }];
-    
-    
-    
-    
-    
-    
-//    // 让刷新控件停止显示刷新状态
-//    [self.collectionView.mj_header endRefreshing];
-    
-    
     
 }
 

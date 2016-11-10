@@ -42,6 +42,10 @@
 		CC1916F81DD2FB7700C1A625 /* CJGameViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */; };
 		CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916FA1DD3016500C1A625 /* CJGameModel.m */; };
 		CC1916FE1DD3036A00C1A625 /* CJBaseGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1916FD1DD3036A00C1A625 /* CJBaseGameModel.m */; };
+		CC4BCEFF1DD4162C00F7032C /* CJAmuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCEFE1DD4162C00F7032C /* CJAmuseViewController.m */; };
+		CC4BCF021DD41CF100F7032C /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF011DD41CF100F7032C /* MJChiBaoZiHeader.m */; };
+		CC4BCF051DD447EE00F7032C /* CJAmuseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF041DD447EE00F7032C /* CJAmuseViewModel.m */; };
+		CC4BCF091DD4547000F7032C /* CJBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF081DD4547000F7032C /* CJBaseViewModel.m */; };
 		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
 		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
 		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
@@ -164,6 +168,14 @@
 		CC1916FA1DD3016500C1A625 /* CJGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGameModel.m; sourceTree = "<group>"; };
 		CC1916FC1DD3036A00C1A625 /* CJBaseGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseGameModel.h; sourceTree = "<group>"; };
 		CC1916FD1DD3036A00C1A625 /* CJBaseGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseGameModel.m; sourceTree = "<group>"; };
+		CC4BCEFD1DD4162C00F7032C /* CJAmuseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAmuseViewController.h; sourceTree = "<group>"; };
+		CC4BCEFE1DD4162C00F7032C /* CJAmuseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAmuseViewController.m; sourceTree = "<group>"; };
+		CC4BCF001DD41CF100F7032C /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		CC4BCF011DD41CF100F7032C /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
+		CC4BCF031DD447EE00F7032C /* CJAmuseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAmuseViewModel.h; sourceTree = "<group>"; };
+		CC4BCF041DD447EE00F7032C /* CJAmuseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAmuseViewModel.m; sourceTree = "<group>"; };
+		CC4BCF071DD4547000F7032C /* CJBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseViewModel.h; sourceTree = "<group>"; };
+		CC4BCF081DD4547000F7032C /* CJBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseViewModel.m; sourceTree = "<group>"; };
 		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
 		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
 		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -376,6 +388,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		CC4BCF061DD4542E00F7032C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC4BCF071DD4547000F7032C /* CJBaseViewModel.h */,
+				CC4BCF081DD4547000F7032C /* CJBaseViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CC6C69781DCC19320040A703 = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +458,7 @@
 		CC6C69CA1DCC23210040A703 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CC4BCF061DD4542E00F7032C /* ViewModel */,
 				CC6C69CC1DCC23210040A703 /* Model */,
 				CC6C69CD1DCC23210040A703 /* View */,
 				CC6C69CB1DCC23210040A703 /* Controller */,
@@ -519,6 +541,8 @@
 		CC6C69D21DCC23410040A703 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CC4BCF001DD41CF100F7032C /* MJChiBaoZiHeader.h */,
+				CC4BCF011DD41CF100F7032C /* MJChiBaoZiHeader.m */,
 				CCAB12B81DD0461500ECDF78 /* ViewModel */,
 				CC6C69D41DCC23410040A703 /* Model */,
 				CC6C69D51DCC23410040A703 /* View */,
@@ -536,6 +560,8 @@
 				CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */,
 				CCAE11611DD2CADF00DE8FE8 /* CJGameViewController.h */,
 				CCAE11621DD2CADF00DE8FE8 /* CJGameViewController.m */,
+				CC4BCEFD1DD4162C00F7032C /* CJAmuseViewController.h */,
+				CC4BCEFE1DD4162C00F7032C /* CJAmuseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -669,6 +695,8 @@
 				CC0D73C51DD16CED005CE9D9 /* CJRecommendViewModel */,
 				CC1916F61DD2FB7700C1A625 /* CJGameViewModel.h */,
 				CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */,
+				CC4BCF031DD447EE00F7032C /* CJAmuseViewModel.h */,
+				CC4BCF041DD447EE00F7032C /* CJAmuseViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -883,9 +911,11 @@
 				CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */,
 				CCD8AB6E1DD0338500F62573 /* UIRefreshControl+AFNetworking.m in Sources */,
 				CC0D73C31DD164E6005CE9D9 /* UIScrollView+MJRefresh.m in Sources */,
+				CC4BCF091DD4547000F7032C /* CJBaseViewModel.m in Sources */,
 				CC0D73BB1DD164E6005CE9D9 /* MJRefreshBackStateFooter.m in Sources */,
 				CCAE11661DD2F5D800DE8FE8 /* UIColor+CJ.m in Sources */,
 				CCD8AB681DD0338500F62573 /* AFImageDownloader.m in Sources */,
+				CC4BCF051DD447EE00F7032C /* CJAmuseViewModel.m in Sources */,
 				CC58AED11DD00B18003A5787 /* CJCollectionPrettyCell.m in Sources */,
 				CCAB12DE1DD0519200ECDF78 /* NSObject+MJKeyValue.m in Sources */,
 				CC0D73BA1DD164E6005CE9D9 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -915,7 +945,9 @@
 				CC6C69AF1DCC1BAF0040A703 /* AppDelegate.m in Sources */,
 				CC0D73B51DD164E6005CE9D9 /* MJRefreshHeader.m in Sources */,
 				CCAB12D71DD0519200ECDF78 /* MJExtensionConst.m in Sources */,
+				CC4BCEFF1DD4162C00F7032C /* CJAmuseViewController.m in Sources */,
 				CCD8AB491DD0305200F62573 /* AFHTTPSessionManager.m in Sources */,
+				CC4BCF021DD41CF100F7032C /* MJChiBaoZiHeader.m in Sources */,
 				CCAB12E31DD0526300ECDF78 /* CJAnchorGroup.m in Sources */,
 				CC0D73B41DD164E6005CE9D9 /* MJRefreshFooter.m in Sources */,
 				CC1916F81DD2FB7700C1A625 /* CJGameViewModel.m in Sources */,

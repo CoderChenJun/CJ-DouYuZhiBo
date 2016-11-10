@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
-@property (nonatomic, strong) NSMutableArray *tempGroups;
+//@property (nonatomic, strong) NSMutableArray *tempGroups;
 
 @end
 
@@ -72,9 +72,12 @@
     {
         _baseGames = baseGames;
         
-        self.tempGroups = [NSMutableArray arrayWithArray:baseGames];
+//        self.tempGroups = [NSMutableArray arrayWithArray:baseGames];
+//        [self reloadTempGroups];
         
-        [self reloadTempGroups];
+        // 3.刷新表格
+        [self.collectionView reloadData];
+        
         
     }
 }
@@ -85,29 +88,29 @@
 
 
 
-- (NSMutableArray *)tempGroups
-{
-    if (_tempGroups == nil)
-    {
-        _tempGroups = [NSMutableArray array];
-    }
-    return _tempGroups;
-}
-
-- (void)reloadTempGroups
-{
-    // 1.移除前两组数据
-    [_tempGroups removeObjectAtIndex:0];
-    [_tempGroups removeObjectAtIndex:0];
-
-    // 2.添加 "更多" 组
-    CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
-    moreAnchorGroup.tag_name = @"更多";
-    [_tempGroups addObject:moreAnchorGroup];
-
-    // 3.刷新表格
-    [self.collectionView reloadData];
-}
+//- (NSMutableArray *)tempGroups
+//{
+//    if (_tempGroups == nil)
+//    {
+//        _tempGroups = [NSMutableArray array];
+//    }
+//    return _tempGroups;
+//}
+//
+//- (void)reloadTempGroups
+//{
+//    // 1.移除前两组数据
+//    [_tempGroups removeObjectAtIndex:0];
+//    [_tempGroups removeObjectAtIndex:0];
+//
+//    // 2.添加 "更多" 组
+//    CJAnchorGroup *moreAnchorGroup = [[CJAnchorGroup alloc] init];
+//    moreAnchorGroup.tag_name = @"更多";
+//    [_tempGroups addObject:moreAnchorGroup];
+//
+//    // 3.刷新表格
+//    [self.collectionView reloadData];
+//}
 
 
 
@@ -171,9 +174,9 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-//    return (self.groups.count) ? (self.groups.count) : 0;
+    return (self.baseGames.count) ? (self.baseGames.count) : 0;
     
-    return (self.tempGroups.count) ? (self.tempGroups.count) : 0;
+//    return (self.tempGroups.count) ? (self.tempGroups.count) : 0;
     
 }
 
@@ -182,7 +185,9 @@
     
     CJCollectionGameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJCollectionGameCellID forIndexPath:indexPath];
     
-    cell.baseGame = self.tempGroups[indexPath.item];
+//    cell.baseGame = self.tempGroups[indexPath.item];
+    
+    cell.baseGame = self.baseGames[indexPath.item];
     
     return cell;
     

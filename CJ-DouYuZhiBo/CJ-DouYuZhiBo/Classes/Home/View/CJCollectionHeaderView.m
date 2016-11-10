@@ -39,4 +39,18 @@
 
 
 
++ (CJCollectionHeaderView *)collectionHeaderView
+{
+    return [[[NSBundle mainBundle] loadNibNamed:@"CJCollectionHeaderView" owner:nil options:nil] firstObject];
+}
+
+
+
+
+
 @end
+
+
+
+
+

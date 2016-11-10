@@ -116,15 +116,23 @@
         
         // 3.便利数组,获取字典,并且将字典转成模型对象
         // 3.1.设置组属性
-        self.bigDataGroup.tag_name = @"最热";
-        self.bigDataGroup.icon_name = @"home_header_hot";
+//        self.bigDataGroup.tag_name = @"最热";
+//        self.bigDataGroup.icon_name = @"home_header_hot";
+        
+        
+        CJAnchorGroup *tempArray = [[CJAnchorGroup alloc] init];
+        tempArray.tag_name = @"最热";
+        tempArray.icon_name = @"home_header_hot";
+        
         
         // 3.2.获取主播数据
         for (NSDictionary *dict in dataArray)
         {
             CJAnchorModel *anchorModel = [CJAnchorModel mj_objectWithKeyValues:dict];
-            [self.bigDataGroup.anchorModels addObject:anchorModel];
+            [tempArray.anchorModels addObject:anchorModel];
         }
+        
+        self.bigDataGroup = tempArray;
         
         
         // 3.3.获取到数据  离开组
@@ -164,16 +172,21 @@
         
         // 3.便利数组,获取字典,并且将字典转成模型对象
         // 3.1.设置组属性
-        self.prettyGroup.tag_name = @"颜值";
-        self.prettyGroup.icon_name = @"home_header_phone";
+//        self.prettyGroup.tag_name = @"颜值";
+//        self.prettyGroup.icon_name = @"home_header_phone";
+        
+        CJAnchorGroup *tempArray = [[CJAnchorGroup alloc] init];
+        tempArray.tag_name = @"颜值";
+        tempArray.icon_name = @"home_header_phone";
         
         // 3.2.获取主播数据
         for (NSDictionary *dict in dataArray)
         {
             CJAnchorModel *anchorModel = [CJAnchorModel mj_objectWithKeyValues:dict];
-            [self.prettyGroup.anchorModels addObject:anchorModel];
+            [tempArray.anchorModels addObject:anchorModel];
         }
         
+        self.prettyGroup = tempArray;
         
         // 3.3.获取到数据  离开组
         dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
@@ -210,20 +223,23 @@
         // 2.根据data的Key,获取数组
         NSArray *dataArray = [resultDict objectForKey:@"data"];
         
+        
+        NSMutableArray *tempArray = [NSMutableArray array];
+
+        
         // 3.便利数组,获取字典,并且将字典转成模型对象
         for (NSDictionary *dict in dataArray)
         {
             CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
-            
-            [self.anchorGroups addObject:anchorGroup];
+            [tempArray addObject:anchorGroup];
             
 #warning mark - 把空组移除
-            if ([anchorGroup.tag_name isEqualToString:@"颜值"]) {
-                [self.anchorGroups removeLastObject];
+            if ([anchorGroup.tag_name isEqualToString:@"颜值"])
+            {
+                [tempArray removeLastObject];
             }
-            
         }
-        
+        self.anchorGroups = tempArray;
         
         
         

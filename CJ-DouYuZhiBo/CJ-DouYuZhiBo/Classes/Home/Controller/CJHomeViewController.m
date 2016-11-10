@@ -13,6 +13,7 @@
 
 #import "CJRecommendViewController.h"
 #import "CJGameViewController.h"
+#import "CJAmuseViewController.h"
 
 #define CJPageTitleViewH 40
 
@@ -75,12 +76,14 @@
         CJGameViewController *gameVc = [[CJGameViewController alloc] init];
         [childVcs addObject:gameVc];
         
-        for (int index = 0; index < 2; index++)
-        {
-            UIViewController *vc =[[UIViewController alloc] init];
-            vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
-            [childVcs addObject:vc];
-        }
+        CJAmuseViewController *amuseVc = [[CJAmuseViewController alloc] init];
+        [childVcs addObject:amuseVc];
+        
+        
+        UIViewController *vc =[[UIViewController alloc] init];
+        vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+        [childVcs addObject:vc];
+        
         
         
         

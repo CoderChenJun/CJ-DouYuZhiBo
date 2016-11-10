@@ -10,10 +10,7 @@
 #import "CJBaseViewModel.h"
 
 typedef void(^MyBlock)();
-@interface CJAmuseViewModel : NSObject
-
-@property (nonatomic, strong) NSMutableArray *anchorGroups;
-
+@interface CJAmuseViewModel : CJBaseViewModel
 
 - (void)loadAmuseDataFinishBlock:(MyBlock)finishCallback;
 

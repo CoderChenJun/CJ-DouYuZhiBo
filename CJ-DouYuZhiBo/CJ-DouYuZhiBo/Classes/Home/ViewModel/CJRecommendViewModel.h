@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CJBaseViewModel.h"
 
 typedef void(^MyBlock)();
 
 
-@interface CJRecommendViewModel : NSObject
+@interface CJRecommendViewModel : CJBaseViewModel
 
 
-@property (nonatomic, strong) NSMutableArray *anchorGroups;
+//@property (nonatomic, strong) NSMutableArray *anchorGroups;
+
+
 /**
  *  请求---(推荐内容数据)
  */

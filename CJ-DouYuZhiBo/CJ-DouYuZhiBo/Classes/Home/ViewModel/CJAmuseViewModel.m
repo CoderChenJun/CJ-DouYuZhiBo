@@ -18,45 +18,15 @@
 @implementation CJAmuseViewModel
 
 
-
-- (NSMutableArray *)anchorGroups
-{
-    if (_anchorGroups == nil)
-    {
-        _anchorGroups = [NSMutableArray array];
-    }
-    return _anchorGroups;
-}
-
-
-
 - (void)loadAmuseDataFinishBlock:(MyBlock)finishCallback
 {
     
-    [[AFHTTPSessionManager manager] GET:@"http://capi.douyucdn.cn/api/v1/getHotRoom/2" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        // 1.将result转成字典
-        NSDictionary *resultDict = responseObject;
-        // 2.根据data的Key,获取数组
-        NSArray *dataArray = [resultDict objectForKey:@"data"];
-        
-        
-        // 3.便利数组,获取字典,并且将字典转成模型对象
-        for (NSDictionary *dict in dataArray)
-        {
-            CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
-            [self.anchorGroups addObject:anchorGroup];
-        }
-        
-        // 4.完成  回调函数
+#pragma mark - 抽取到父类 - CJBaseViewModel - 中
+    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotRoom/2" parameters:nil FinishBlock:^{
         finishCallback();
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        CJLog(@"CJAmuseViewModel------111---Error: %@", error);
     }];
     
     
-
 }
 
 

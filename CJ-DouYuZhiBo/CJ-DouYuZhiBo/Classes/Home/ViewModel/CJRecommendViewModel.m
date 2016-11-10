@@ -44,14 +44,14 @@
 
 
 
-- (NSMutableArray *)anchorGroups
-{
-    if (_anchorGroups == nil)
-    {
-        _anchorGroups = [NSMutableArray array];
-    }
-    return _anchorGroups;
-}
+//- (NSMutableArray *)anchorGroups
+//{
+//    if (_anchorGroups == nil)
+//    {
+//        _anchorGroups = [NSMutableArray array];
+//    }
+//    return _anchorGroups;
+//}
 
 
 - (CJAnchorGroup *)prettyGroup
@@ -213,43 +213,57 @@
 #pragma mark - 5.请求后2-12部分游戏数据
     // 5.请求后2-12部分游戏数据
     
+    
+    
     dispatch_group_enter(dispatchGroup);// 发出请求进入组
     
-    [[AFHTTPSessionManager manager] GET:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        
-        // 1.将result转成字典
-        NSDictionary *resultDict = responseObject;
-        
-        // 2.根据data的Key,获取数组
-        NSArray *dataArray = [resultDict objectForKey:@"data"];
-        
-        
-        NSMutableArray *tempArray = [NSMutableArray array];
-
-        
-        // 3.便利数组,获取字典,并且将字典转成模型对象
-        for (NSDictionary *dict in dataArray)
-        {
-            CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
-            [tempArray addObject:anchorGroup];
-            
-#warning mark - 把空组移除
-            if ([anchorGroup.tag_name isEqualToString:@"颜值"])
-            {
-                [tempArray removeLastObject];
-            }
-        }
-        self.anchorGroups = tempArray;
-        
-        
-        
-        // 4.获取到数据  离开组
+    
+    
+#warning mark - 抽取到父类 - CJBaseViewModel - 中
+    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters FinishBlock:^{
         dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
-        
-        
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        CJLog(@"CJRecommendViewModel------第2-12部分---Error: %@", error);
     }];
+    
+    
+    
+    
+    
+//    [[AFHTTPSessionManager manager] GET:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+//        
+//        // 1.将result转成字典
+//        NSDictionary *resultDict = responseObject;
+//        
+//        // 2.根据data的Key,获取数组
+//        NSArray *dataArray = [resultDict objectForKey:@"data"];
+//        
+//        
+//        NSMutableArray *tempArray = [NSMutableArray array];
+//
+//        
+//        // 3.便利数组,获取字典,并且将字典转成模型对象
+//        for (NSDictionary *dict in dataArray)
+//        {
+//            CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
+//            [tempArray addObject:anchorGroup];
+//            
+//#warning mark - 把空组移除
+//            if ([anchorGroup.tag_name isEqualToString:@"颜值"])
+//            {
+//                [tempArray removeLastObject];
+//            }
+//        }
+//        
+//        self.anchorGroups = tempArray;
+//        
+//        
+//        
+//        // 4.获取到数据  离开组
+//        dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
+//        
+//        
+//    } failure:^(NSURLSessionTask *operation, NSError *error) {
+//        CJLog(@"CJRecommendViewModel------第2-12部分---Error: %@", error);
+//    }];
     
     
     

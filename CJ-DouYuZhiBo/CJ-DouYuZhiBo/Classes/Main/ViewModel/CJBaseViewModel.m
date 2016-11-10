@@ -51,13 +51,19 @@
         {
             CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
             [self.anchorGroups addObject:anchorGroup];
+            
+            if (anchorGroup.room_list.count == 0)
+            {
+                [self.anchorGroups removeLastObject];
+            }
+            
         }
         
         // 4.完成  回调函数
         finishCallback();
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        CJLog(@"CJAmuseViewModel------111---Error: %@", error);
+        CJLog(@"CJBaseViewModel------111---Error: %@", error);
     }];
 
     

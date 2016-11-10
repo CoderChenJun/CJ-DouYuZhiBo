@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJBaseAnchorViewController.h"
 
-@interface CJAmuseViewController : UIViewController
+
+@interface CJAmuseViewController : CJBaseAnchorViewController
 
 @end

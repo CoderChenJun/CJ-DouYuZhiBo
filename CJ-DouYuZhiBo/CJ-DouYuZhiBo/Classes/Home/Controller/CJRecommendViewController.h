@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CJBaseAnchorViewController.h"
 
-@interface CJRecommendViewController : UIViewController
+@interface CJRecommendViewController : CJBaseAnchorViewController
 
 @end

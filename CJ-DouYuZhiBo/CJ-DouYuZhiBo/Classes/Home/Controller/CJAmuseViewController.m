@@ -113,18 +113,18 @@
 
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    
-//    // 1.设置UI界面
-//    [self setupUI];
-    
-//    // 2.发送网络请求
-//    [self loadData];
-    
-}
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    
+//    
+////    // 1.设置UI界面
+////    [self setupUI];
+//    
+////    // 2.发送网络请求
+////    [self loadData];
+//    
+//}
 
 
 ///**

@@ -7,52 +7,15 @@
 //
 
 #import "CJBaseAnchorViewController.h"
-#import "CJCollectionHeaderView.h"
-#import "CJCollectionNormalCell.h"
-
-
-#define CJItemMargin 10
-#define CJItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
-#define CJNormalItemH (CJItemW * 3 / 4)
-//#define CJPrettyItemH (CJItemW * 4 / 3)
-#define CJPrettyItemH (CJItemW * 7 / 6)
-#define CJHeaderViewH 50
-
-
-#define CJRecommendCycleViewH (CJUIScreenW * 3 / 8)
-#define CJRecommendGameViewH 90
-
-
-
-#define CJNormalCellID @"CJNormalCellID"
-#define CJPrettyCellID @"CJPrettyCellID"
-
-#define CJHeaderViewID @"CJHeaderViewID"
-
-
-
-
-
 
 
 @interface CJBaseAnchorViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-
-
-
 
 @end
 
 
 
-
-
-
-
-
 @implementation CJBaseAnchorViewController
-
-
-
 
 
 - (UICollectionView *)collectionView
@@ -61,12 +24,11 @@
     {
         // 1.创建布局
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake(CJItemW, CJNormalItemH);
+        layout.itemSize = CGSizeMake(CJNormalItemW, CJNormalItemH);
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = CJItemMargin;
         layout.headerReferenceSize = CGSizeMake(CJUIScreenW, CJHeaderViewH);
         layout.sectionInset = UIEdgeInsetsMake(0, CJItemMargin, 0, CJItemMargin);
-        
         
         
         // 2.创建UICollectionView
@@ -99,12 +61,11 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     
+    [super viewDidLoad];
     
     // 1.设置UI界面
     [self setupUI];
-    
     
     // 2.发送网络请求
     [self loadData];
@@ -120,7 +81,6 @@
 - (void)setupUI
 {
     [self.view addSubview:self.collectionView];
-    
 }
 
 
@@ -128,18 +88,6 @@
 {
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -157,7 +105,9 @@
 {
     
     CJAnchorGroup *group = self.baseViewModel.anchorGroups[section];
-    return group.anchorModels.count;
+    
+#warning mark - 如果count为基数,则减1,用双数表示
+    return (group.anchorModels.count % 2) ? (group.anchorModels.count - 1) : (group.anchorModels.count);
     
 }
 
@@ -188,9 +138,6 @@
     return headerView;
     
 }
-
-
-
 
 
 

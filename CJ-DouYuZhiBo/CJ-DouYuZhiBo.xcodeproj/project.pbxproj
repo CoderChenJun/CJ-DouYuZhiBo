@@ -47,6 +47,8 @@
 		CC4BCF051DD447EE00F7032C /* CJAmuseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF041DD447EE00F7032C /* CJAmuseViewModel.m */; };
 		CC4BCF091DD4547000F7032C /* CJBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF081DD4547000F7032C /* CJBaseViewModel.m */; };
 		CC4BCF0C1DD45A9A00F7032C /* CJBaseAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF0B1DD45A9A00F7032C /* CJBaseAnchorViewController.m */; };
+		CC4BCF0F1DD46E8D00F7032C /* CJAmuseMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BCF0E1DD46E8D00F7032C /* CJAmuseMenuView.m */; };
+		CC4BCF111DD46EA600F7032C /* CJAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4BCF101DD46EA600F7032C /* CJAmuseMenuView.xib */; };
 		CC58AEC31DD00987003A5787 /* CJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */; };
 		CC58AEC71DD00A4F003A5787 /* CJCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58AEC51DD00A4F003A5787 /* CJCollectionHeaderView.m */; };
 		CC58AEC81DD00A4F003A5787 /* CJCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58AEC61DD00A4F003A5787 /* CJCollectionHeaderView.xib */; };
@@ -179,6 +181,9 @@
 		CC4BCF081DD4547000F7032C /* CJBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseViewModel.m; sourceTree = "<group>"; };
 		CC4BCF0A1DD45A9A00F7032C /* CJBaseAnchorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseAnchorViewController.h; sourceTree = "<group>"; };
 		CC4BCF0B1DD45A9A00F7032C /* CJBaseAnchorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseAnchorViewController.m; sourceTree = "<group>"; };
+		CC4BCF0D1DD46E8D00F7032C /* CJAmuseMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAmuseMenuView.h; sourceTree = "<group>"; };
+		CC4BCF0E1DD46E8D00F7032C /* CJAmuseMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAmuseMenuView.m; sourceTree = "<group>"; };
+		CC4BCF101DD46EA600F7032C /* CJAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJAmuseMenuView.xib; sourceTree = "<group>"; };
 		CC58AEC11DD00987003A5787 /* CJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommendViewController.h; sourceTree = "<group>"; };
 		CC58AEC21DD00987003A5787 /* CJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommendViewController.m; sourceTree = "<group>"; };
 		CC58AEC41DD00A4F003A5787 /* CJCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -600,6 +605,9 @@
 				CC0D73E21DD1D033005CE9D9 /* CJCollectionGameCell.h */,
 				CC0D73E31DD1D033005CE9D9 /* CJCollectionGameCell.m */,
 				CC0D73E41DD1D033005CE9D9 /* CJCollectionGameCell.xib */,
+				CC4BCF0D1DD46E8D00F7032C /* CJAmuseMenuView.h */,
+				CC4BCF0E1DD46E8D00F7032C /* CJAmuseMenuView.m */,
+				CC4BCF101DD46EA600F7032C /* CJAmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +871,7 @@
 				CC58AED21DD00B18003A5787 /* CJCollectionPrettyCell.xib in Resources */,
 				CC6C69BB1DCC20550040A703 /* Live.storyboard in Resources */,
 				CC58AECD1DD00B07003A5787 /* CJCollectionNormalCell.xib in Resources */,
+				CC4BCF111DD46EA600F7032C /* CJAmuseMenuView.xib in Resources */,
 				CC0D73E61DD1D033005CE9D9 /* CJCollectionGameCell.xib in Resources */,
 				CC6C69B31DCC1BAF0040A703 /* Main.storyboard in Resources */,
 				CCAB12D61DD0519200ECDF78 /* Info.plist in Resources */,
@@ -886,6 +895,7 @@
 				CC0D73B61DD164E6005CE9D9 /* MJRefreshAutoGifFooter.m in Sources */,
 				CC0D73CC1DD17E94005CE9D9 /* CJCollectionNormalCell.m in Sources */,
 				CC0D73C91DD17E36005CE9D9 /* CJCollectionBaseCell.m in Sources */,
+				CC4BCF0F1DD46E8D00F7032C /* CJAmuseMenuView.m in Sources */,
 				CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */,
 				CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,

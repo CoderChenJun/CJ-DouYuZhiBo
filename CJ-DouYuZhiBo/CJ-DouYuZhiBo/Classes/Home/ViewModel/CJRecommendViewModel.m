@@ -299,7 +299,6 @@
 - (void)requestCycleDataFinishBlock:(MyBlock)finishCallback
 {
     
-    
     [[AFHTTPSessionManager manager] GET:@"http://www.douyutv.com/api/v1/slide/6" parameters:@{@"version" : @"2.300"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         // 1.将result转成字典

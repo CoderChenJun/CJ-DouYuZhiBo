@@ -18,4 +18,16 @@
     
 }
 
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    // 设置该控件 不随 父控件拉伸 而 拉伸
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
+}
+
+
+
 @end

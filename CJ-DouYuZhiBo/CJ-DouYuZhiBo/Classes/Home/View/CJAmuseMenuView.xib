@@ -40,7 +40,7 @@
                 <constraint firstAttribute="bottom" secondItem="sWc-Vt-Dpx" secondAttribute="bottom" constant="-5" id="yd5-eV-qgl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-698" y="-99"/>
+            <point key="canvasLocation" x="-855" y="-77"/>
         </view>
     </objects>
 </document>

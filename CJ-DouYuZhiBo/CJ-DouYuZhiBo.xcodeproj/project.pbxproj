@@ -107,6 +107,7 @@
 		CCF713041DD56B6F00CC377F /* CJAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCF713021DD56B6F00CC377F /* CJAmuseMenuViewCell.xib */; };
 		CCF713071DD5820800CC377F /* CJFunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713061DD5820800CC377F /* CJFunnyViewController.m */; };
 		CCF7130A1DD586F800CC377F /* CJFunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713091DD586F800CC377F /* CJFunnyViewModel.m */; };
+		CCF7130D1DD58ED200CC377F /* CJBaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +300,8 @@
 		CCF713061DD5820800CC377F /* CJFunnyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFunnyViewController.m; sourceTree = "<group>"; };
 		CCF713081DD586F800CC377F /* CJFunnyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFunnyViewModel.h; sourceTree = "<group>"; };
 		CCF713091DD586F800CC377F /* CJFunnyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFunnyViewModel.m; sourceTree = "<group>"; };
+		CCF7130B1DD58ED200CC377F /* CJBaseHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseHomeViewController.h; sourceTree = "<group>"; };
+		CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +495,8 @@
 				CC6C69E61DCC23A40040A703 /* CJMainViewController.m */,
 				CC4BCF0A1DD45A9A00F7032C /* CJBaseAnchorViewController.h */,
 				CC4BCF0B1DD45A9A00F7032C /* CJBaseAnchorViewController.m */,
+				CCF7130B1DD58ED200CC377F /* CJBaseHomeViewController.h */,
+				CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -915,6 +920,7 @@
 				CC0D73CC1DD17E94005CE9D9 /* CJCollectionNormalCell.m in Sources */,
 				CC0D73C91DD17E36005CE9D9 /* CJCollectionBaseCell.m in Sources */,
 				CCF713031DD56B6F00CC377F /* CJAmuseMenuViewCell.m in Sources */,
+				CCF7130D1DD58ED200CC377F /* CJBaseHomeViewController.m in Sources */,
 				CC4BCF0F1DD46E8D00F7032C /* CJAmuseMenuView.m in Sources */,
 				CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */,
 				CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */,

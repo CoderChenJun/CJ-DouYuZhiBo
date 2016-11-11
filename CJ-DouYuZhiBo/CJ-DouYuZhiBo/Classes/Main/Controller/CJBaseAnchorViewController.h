@@ -13,6 +13,9 @@
 
 
 
+#import "CJBaseHomeViewController.h"
+
+
 
 
 #define CJItemMargin 10
@@ -27,17 +30,13 @@
 
 
 
-
-
-
-
 #define CJPrettyCellID @"CJPrettyCellID"
 #define CJNormalItemW ((CJUIScreenW - 3 * CJItemMargin) / 2)
 #define CJNormalItemH (CJNormalItemW * 3 / 4)
 #define CJPrettyItemH (CJNormalItemW * 7 / 6)
 
 
-@interface CJBaseAnchorViewController : UIViewController
+@interface CJBaseAnchorViewController : CJBaseHomeViewController
 
 
 
@@ -50,6 +49,8 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+
 
 @end
 

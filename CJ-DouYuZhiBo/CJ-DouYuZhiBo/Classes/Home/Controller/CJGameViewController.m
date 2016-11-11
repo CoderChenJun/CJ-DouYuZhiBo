@@ -175,8 +175,17 @@
  */
 - (void)setupUI
 {
-    // 1.添加UICollectionView
+    
+    
+    
+    // 111111111111.给父类中的内容View的引用进行赋值
+    self.contentView = self.collectionView;
+    
+    // 2222222222222.添加collectionView
     [self.view addSubview:self.collectionView];
+    
+//    // 1.添加UICollectionView
+//    [self.view addSubview:self.collectionView];
     
     
     // 2.将顶部的HeaderView添加到UICollectionView
@@ -190,6 +199,11 @@
     self.collectionView.contentInset = UIEdgeInsetsMake(CJHeaderViewH + CJGameViewH, 0, 0, 0);
     
     
+    
+    // 3333333333333.调用[super setupUI]
+    [super setupUI];
+    
+    
 }
 
 
@@ -199,15 +213,17 @@
     
     [self.gameViewModel loadAllGameDataFinishBlock:^{
         
-        
         // 1.展示常用游戏
         self.gameView.baseGames = [NSMutableArray arrayWithArray:[self.gameViewModel.gameModels subarrayWithRange:NSMakeRange(0, 10)]];
         
-        
-        
-        
         // 2.展示全部游戏
         [self.collectionView reloadData];
+        
+        
+        
+#warning mark - 数据请求完成,隐藏动画
+        // 3.数据请求完成
+        [self loadDateFinished];
         
         
     }];

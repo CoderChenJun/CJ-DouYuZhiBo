@@ -78,12 +78,20 @@
     // 2.请求数据
     [self.amuseViewModel loadAmuseDataFinishBlock:^{
         
+        // 2.1.刷新表格
         [self.collectionView reloadData];
         
-        
+        // 2.2.调整数据
         NSMutableArray *tempArray = self.amuseViewModel.anchorGroups;
         [tempArray removeObjectAtIndex:0];
         self.amuseMenuView.anchorGroups = tempArray;
+        
+        
+        
+        
+#warning mark - 数据请求完成,隐藏动画
+        // 3.数据请求完成
+        [self loadDateFinished];
         
     }];
     

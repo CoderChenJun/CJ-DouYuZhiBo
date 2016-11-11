@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJBaseHomeViewController.h"
 
-@interface CJGameViewController : UIViewController
+
+
+@interface CJGameViewController : CJBaseHomeViewController
 
 @end

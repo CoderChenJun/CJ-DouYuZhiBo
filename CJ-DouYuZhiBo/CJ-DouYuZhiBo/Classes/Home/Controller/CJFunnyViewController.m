@@ -61,7 +61,16 @@
     
     // 2.请求数据
     [self.funnyViewModel loadFunnyDataFinishBlock:^{
+        
+        // 2.1.刷新表格
         [self.collectionView reloadData];
+        
+        
+        
+#warning mark - 数据请求完成,隐藏动画
+        // 3.数据请求完成
+        [self loadDateFinished];
+        
     }];
     
     

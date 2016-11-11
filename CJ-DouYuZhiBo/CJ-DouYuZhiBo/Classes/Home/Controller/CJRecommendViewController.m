@@ -147,13 +147,6 @@
     self.baseViewModel = self.recommendViewModel;
     
     
-    // 1.请求---轮播器数据
-    [self.recommendViewModel requestCycleDataFinishBlock:^{
-        CJLog(@"CJRecommendViewController------轮播器数据请求完成");
-        
-        self.recommendCycleView.cycleModels = self.recommendViewModel.cycleModels;
-        
-    }];
     
     
     // 2.请求---推荐数据
@@ -161,7 +154,6 @@
         
         // 2.1.刷新展示 推荐数据
         [self.collectionView reloadData];
-        
         
         // 2.2.将数据传递给GameView
         // 2.2.1.移除前两组数据
@@ -178,6 +170,24 @@
         self.recommendGameView.baseGames = tempGroups;
         
     }];
+    
+    
+    
+    
+    
+#warning mark - 轮播器API比较慢,所以放在推荐数据后面
+    // 3.请求---轮播器数据
+    [self.recommendViewModel requestCycleDataFinishBlock:^{
+        CJLog(@"CJRecommendViewController------轮播器数据请求完成");
+        
+        self.recommendCycleView.cycleModels = self.recommendViewModel.cycleModels;
+        
+#warning mark - 数据请求完成,隐藏动画
+        // 4.数据请求完成
+        [self loadDateFinished];
+        
+    }];
+    
     
 }
 

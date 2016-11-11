@@ -80,7 +80,17 @@
  */
 - (void)setupUI
 {
+    
+    // 1.给父类中的内容View的引用进行赋值
+    self.contentView = self.collectionView;
+    
+    // 2.添加collectionView
     [self.view addSubview:self.collectionView];
+    
+    // 3.调用[super setupUI]
+    [super setupUI];
+    
+    
 }
 
 

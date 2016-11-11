@@ -22,7 +22,7 @@
 {
     
 #pragma mark - 抽取到父类 - CJBaseViewModel - 中
-    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotRoom/2" parameters:nil FinishBlock:^{
+    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotRoom/2" parameters:nil isGroupData:YES FinishBlock:^{
         finishCallback();
     }];
     

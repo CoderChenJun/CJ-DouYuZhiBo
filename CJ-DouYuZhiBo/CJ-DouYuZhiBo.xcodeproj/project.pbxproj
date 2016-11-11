@@ -105,6 +105,8 @@
 		CCD8AB6F1DD0338500F62573 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8AB661DD0338500F62573 /* UIWebView+AFNetworking.m */; };
 		CCF713031DD56B6F00CC377F /* CJAmuseMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713011DD56B6F00CC377F /* CJAmuseMenuViewCell.m */; };
 		CCF713041DD56B6F00CC377F /* CJAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCF713021DD56B6F00CC377F /* CJAmuseMenuViewCell.xib */; };
+		CCF713071DD5820800CC377F /* CJFunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713061DD5820800CC377F /* CJFunnyViewController.m */; };
+		CCF7130A1DD586F800CC377F /* CJFunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713091DD586F800CC377F /* CJFunnyViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -293,6 +295,10 @@
 		CCF713001DD56B6F00CC377F /* CJAmuseMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAmuseMenuViewCell.h; sourceTree = "<group>"; };
 		CCF713011DD56B6F00CC377F /* CJAmuseMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAmuseMenuViewCell.m; sourceTree = "<group>"; };
 		CCF713021DD56B6F00CC377F /* CJAmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJAmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		CCF713051DD5820800CC377F /* CJFunnyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFunnyViewController.h; sourceTree = "<group>"; };
+		CCF713061DD5820800CC377F /* CJFunnyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFunnyViewController.m; sourceTree = "<group>"; };
+		CCF713081DD586F800CC377F /* CJFunnyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFunnyViewModel.h; sourceTree = "<group>"; };
+		CCF713091DD586F800CC377F /* CJFunnyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFunnyViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +583,8 @@
 				CCAE11621DD2CADF00DE8FE8 /* CJGameViewController.m */,
 				CC4BCEFD1DD4162C00F7032C /* CJAmuseViewController.h */,
 				CC4BCEFE1DD4162C00F7032C /* CJAmuseViewController.m */,
+				CCF713051DD5820800CC377F /* CJFunnyViewController.h */,
+				CCF713061DD5820800CC377F /* CJFunnyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -718,6 +726,8 @@
 				CC1916F71DD2FB7700C1A625 /* CJGameViewModel.m */,
 				CC4BCF031DD447EE00F7032C /* CJAmuseViewModel.h */,
 				CC4BCF041DD447EE00F7032C /* CJAmuseViewModel.m */,
+				CCF713081DD586F800CC377F /* CJFunnyViewModel.h */,
+				CCF713091DD586F800CC377F /* CJFunnyViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -957,9 +967,11 @@
 				CC0D73B21DD164E6005CE9D9 /* MJRefreshBackFooter.m in Sources */,
 				CCAB12BB1DD0464000ECDF78 /* CJRecommendViewModel.m in Sources */,
 				CCAB12D81DD0519200ECDF78 /* MJFoundation.m in Sources */,
+				CCF7130A1DD586F800CC377F /* CJFunnyViewModel.m in Sources */,
 				CC0D73DB1DD1B26E005CE9D9 /* CJCollectionCycleCell.m in Sources */,
 				CCD8AB671DD0338500F62573 /* AFAutoPurgingImageCache.m in Sources */,
 				CC0D73BC1DD164E6005CE9D9 /* MJRefreshGifHeader.m in Sources */,
+				CCF713071DD5820800CC377F /* CJFunnyViewController.m in Sources */,
 				CCD8AB6A1DD0338500F62573 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CCD8AB4A1DD0305200F62573 /* AFNetworkReachabilityManager.m in Sources */,
 				CC0D73B71DD164E6005CE9D9 /* MJRefreshAutoNormalFooter.m in Sources */,

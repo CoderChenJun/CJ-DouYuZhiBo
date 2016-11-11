@@ -98,14 +98,28 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
+    
+//    if (self.baseViewModel == nil)
+//    {
+//        return 3;
+//    }
+    
+    
     return self.baseViewModel.anchorGroups.count;
+//    return (self.baseViewModel.anchorGroups.count) ? (self.baseViewModel.anchorGroups.count) : 0;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-    CJAnchorGroup *group = self.baseViewModel.anchorGroups[section];
     
+//    if (self.baseViewModel == nil)
+//    {
+//        return 4;
+//    }
+    
+    
+    CJAnchorGroup *group = self.baseViewModel.anchorGroups[section];
 #warning mark - 如果count为基数,则减1,用双数表示
     return (group.anchorModels.count % 2) ? (group.anchorModels.count - 1) : (group.anchorModels.count);
     
@@ -117,10 +131,14 @@
     // 2.定义cell
     CJCollectionNormalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJNormalCellID forIndexPath:indexPath];
     
+//    if (self.baseViewModel == nil)
+//    {
+//        return cell;
+//    }
+    
     
     CJAnchorGroup *group = self.baseViewModel.anchorGroups[indexPath.section];
     cell.anchorModel = group.anchorModels[indexPath.item];
-//    cell.backgroundColor = [UIColor randomColor];
     
     return cell;
     
@@ -131,6 +149,12 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     CJCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:CJHeaderViewID forIndexPath:indexPath];
+    
+    
+//    if (self.baseViewModel == nil)
+//    {
+//        return headerView;
+//    }
     
     // 2.取出模型
     headerView.anchorGroup = self.baseViewModel.anchorGroups[indexPath.section];

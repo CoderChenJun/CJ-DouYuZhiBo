@@ -14,6 +14,8 @@
 #import "CJRecommendViewController.h"
 #import "CJGameViewController.h"
 #import "CJAmuseViewController.h"
+#import "CJFunnyViewController.h"
+
 
 #define CJPageTitleViewH 40
 
@@ -79,18 +81,13 @@
         CJAmuseViewController *amuseVc = [[CJAmuseViewController alloc] init];
         [childVcs addObject:amuseVc];
         
-        
-        UIViewController *vc =[[UIViewController alloc] init];
-        vc.view.backgroundColor = CJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
-        [childVcs addObject:vc];
-        
-        
+        CJFunnyViewController *funnyVc = [[CJFunnyViewController alloc] init];
+        [childVcs addObject:funnyVc];
         
         
         
         // 3.创建CJPageContentView
         _pageContentView = [[CJPageContentView alloc] initWithFrame:contentFrame childVcs:childVcs parentViewController:self];
-        
         _pageContentView.delegate = self;
         
     }

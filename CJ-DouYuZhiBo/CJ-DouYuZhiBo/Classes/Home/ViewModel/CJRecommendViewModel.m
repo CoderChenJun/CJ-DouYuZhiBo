@@ -220,7 +220,7 @@
     
     
 #warning mark - 抽取到父类 - CJBaseViewModel - 中
-    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters FinishBlock:^{
+    [self loadAnchorDataWithURLString:@"http://capi.douyucdn.cn/api/v1/getHotCate" parameters:parameters isGroupData:YES FinishBlock:^{
         dispatch_group_leave(dispatchGroup);// 获取到数据  离开组
     }];
     

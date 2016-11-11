@@ -8,6 +8,7 @@
 
 #import "CJBaseViewModel.h"
 #import "CJAnchorGroup.h"
+#import "CJAnchorModel.h"
 
 @interface CJBaseViewModel()
 
@@ -34,7 +35,7 @@
 
 
 
-- (void)loadAnchorDataWithURLString:(NSString *)urlString parameters:(id)parameters FinishBlock:(MyBlock)finishCallback
+- (void)loadAnchorDataWithURLString:(NSString *)urlString parameters:(id)parameters isGroupData:(BOOL)isGroupData FinishBlock:(MyBlock)finishCallback
 {
     
     
@@ -46,18 +47,50 @@
         NSArray *dataArray = [resultDict objectForKey:@"data"];
         
         
-        // 3.便利数组,获取字典,并且将字典转成模型对象
-        for (NSDictionary *dict in dataArray)
+        
+        
+#pragma mark - 3.判断dataArray中是否 为分组数据
+        // 3.判断dataArray中是否 为分组数据
+        
+        
+        
+        if (isGroupData == YES)// dataArray是分组的数据
         {
-            CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
-            [self.anchorGroups addObject:anchorGroup];
-            
-            if (anchorGroup.room_list.count == 0)
+            // 3.1便利数组,获取字典,并且将字典转成模型对象
+            for (NSDictionary *dict in dataArray)
             {
-                [self.anchorGroups removeLastObject];
+                CJAnchorGroup *anchorGroup = [CJAnchorGroup mj_objectWithKeyValues:dict];
+                [self.anchorGroups addObject:anchorGroup];
+                
+#warning mark - 这一步移除是为了删除空数据的组
+                if (anchorGroup.room_list.count == 0)
+                {
+                    [self.anchorGroups removeLastObject];
+                }
+            }
+        }
+        else// dataArray不是分组的数据
+        {
+            // 3.1创建组
+            CJAnchorGroup *anchorGroup = [[CJAnchorGroup alloc] init];
+            
+            // 3.2便利dataArray中的所有的字典
+            for (NSDictionary *dict in dataArray)
+            {
+                CJAnchorModel *anchorModel = [CJAnchorModel mj_objectWithKeyValues:dict];
+                [anchorGroup.anchorModels addObject:anchorModel];
             }
             
+            // 3.3将创建的anchorGroup添加到elf.anchorGroups
+            [self.anchorGroups addObject:anchorGroup];
+//            if (anchorGroup.room_list.count == 0)
+//            {
+//                [self.anchorGroups removeLastObject];
+//            }
+            
         }
+        
+        
         
         // 4.完成  回调函数
         finishCallback();

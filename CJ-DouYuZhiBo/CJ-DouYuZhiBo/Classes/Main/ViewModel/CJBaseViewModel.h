@@ -16,8 +16,7 @@ typedef void(^MyBlock)();
 @property (nonatomic, strong) NSMutableArray *anchorGroups;
 
 
-- (void)loadAnchorDataWithURLString:(NSString *)urlString parameters:(id)parameters FinishBlock:(MyBlock)finishCallback;
-
+- (void)loadAnchorDataWithURLString:(NSString *)urlString parameters:(id)parameters isGroupData:(BOOL)isGroupData FinishBlock:(MyBlock)finishCallback;
 
 
 @end

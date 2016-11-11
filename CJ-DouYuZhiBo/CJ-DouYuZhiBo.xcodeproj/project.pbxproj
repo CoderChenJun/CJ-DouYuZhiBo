@@ -108,6 +108,9 @@
 		CCF713071DD5820800CC377F /* CJFunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713061DD5820800CC377F /* CJFunnyViewController.m */; };
 		CCF7130A1DD586F800CC377F /* CJFunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713091DD586F800CC377F /* CJFunnyViewModel.m */; };
 		CCF7130D1DD58ED200CC377F /* CJBaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */; };
+		CCF713141DD5992700CC377F /* CJRoomShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713131DD5992700CC377F /* CJRoomShowViewController.m */; };
+		CCF713171DD5995700CC377F /* CJRoomNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713161DD5995700CC377F /* CJRoomNormalViewController.m */; };
+		CCF7131A1DD5A0FA00CC377F /* CJCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713191DD5A0FA00CC377F /* CJCustomNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -302,6 +305,12 @@
 		CCF713091DD586F800CC377F /* CJFunnyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFunnyViewModel.m; sourceTree = "<group>"; };
 		CCF7130B1DD58ED200CC377F /* CJBaseHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseHomeViewController.h; sourceTree = "<group>"; };
 		CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseHomeViewController.m; sourceTree = "<group>"; };
+		CCF713121DD5992700CC377F /* CJRoomShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomShowViewController.h; sourceTree = "<group>"; };
+		CCF713131DD5992700CC377F /* CJRoomShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomShowViewController.m; sourceTree = "<group>"; };
+		CCF713151DD5995700CC377F /* CJRoomNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomNormalViewController.h; sourceTree = "<group>"; };
+		CCF713161DD5995700CC377F /* CJRoomNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomNormalViewController.m; sourceTree = "<group>"; };
+		CCF713181DD5A0FA00CC377F /* CJCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCustomNavigationController.h; sourceTree = "<group>"; };
+		CCF713191DD5A0FA00CC377F /* CJCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCustomNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +459,7 @@
 				CC6C699D1DCC1BAF0040A703 /* AppDelegate.h */,
 				CC6C699E1DCC1BAF0040A703 /* AppDelegate.m */,
 				CC6C69CA1DCC23210040A703 /* Main */,
+				CCF7130E1DD598DE00CC377F /* Room */,
 				CC6C69D21DCC23410040A703 /* Home */,
 				CC6C69D61DCC23410040A703 /* Live */,
 				CC6C69CE1DCC23410040A703 /* Follow */,
@@ -493,10 +503,12 @@
 			children = (
 				CC6C69E51DCC23A40040A703 /* CJMainViewController.h */,
 				CC6C69E61DCC23A40040A703 /* CJMainViewController.m */,
-				CC4BCF0A1DD45A9A00F7032C /* CJBaseAnchorViewController.h */,
-				CC4BCF0B1DD45A9A00F7032C /* CJBaseAnchorViewController.m */,
+				CCF713181DD5A0FA00CC377F /* CJCustomNavigationController.h */,
+				CCF713191DD5A0FA00CC377F /* CJCustomNavigationController.m */,
 				CCF7130B1DD58ED200CC377F /* CJBaseHomeViewController.h */,
 				CCF7130C1DD58ED200CC377F /* CJBaseHomeViewController.m */,
+				CC4BCF0A1DD45A9A00F7032C /* CJBaseAnchorViewController.h */,
+				CC4BCF0B1DD45A9A00F7032C /* CJBaseAnchorViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -824,6 +836,41 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		CCF7130E1DD598DE00CC377F /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				CCF713101DD598DE00CC377F /* Model */,
+				CCF713111DD598DE00CC377F /* View */,
+				CCF7130F1DD598DE00CC377F /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		CCF7130F1DD598DE00CC377F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCF713151DD5995700CC377F /* CJRoomNormalViewController.h */,
+				CCF713161DD5995700CC377F /* CJRoomNormalViewController.m */,
+				CCF713121DD5992700CC377F /* CJRoomShowViewController.h */,
+				CCF713131DD5992700CC377F /* CJRoomShowViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCF713101DD598DE00CC377F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCF713111DD598DE00CC377F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -925,6 +972,7 @@
 				CC1916FB1DD3016500C1A625 /* CJGameModel.m in Sources */,
 				CCD8AB4B1DD0305200F62573 /* AFSecurityPolicy.m in Sources */,
 				CC6C69F51DCC2FFD0040A703 /* UIImage+CJ.m in Sources */,
+				CCF713141DD5992700CC377F /* CJRoomShowViewController.m in Sources */,
 				CCAB12DF1DD0519200ECDF78 /* NSObject+MJProperty.m in Sources */,
 				CCD8AB691DD0338500F62573 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				CCAB12DB1DD0519200ECDF78 /* MJPropertyType.m in Sources */,
@@ -969,6 +1017,7 @@
 				CCD8AB511DD030BC00F62573 /* CJNetworkTools.m in Sources */,
 				CCD8AB4D1DD0305200F62573 /* AFURLResponseSerialization.m in Sources */,
 				CCAB12DA1DD0519200ECDF78 /* MJPropertyKey.m in Sources */,
+				CCF713171DD5995700CC377F /* CJRoomNormalViewController.m in Sources */,
 				CC0D73B81DD164E6005CE9D9 /* MJRefreshAutoStateFooter.m in Sources */,
 				CC0D73B21DD164E6005CE9D9 /* MJRefreshBackFooter.m in Sources */,
 				CCAB12BB1DD0464000ECDF78 /* CJRecommendViewModel.m in Sources */,
@@ -981,6 +1030,7 @@
 				CCD8AB6A1DD0338500F62573 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CCD8AB4A1DD0305200F62573 /* AFNetworkReachabilityManager.m in Sources */,
 				CC0D73B71DD164E6005CE9D9 /* MJRefreshAutoNormalFooter.m in Sources */,
+				CCF7131A1DD5A0FA00CC377F /* CJCustomNavigationController.m in Sources */,
 				CCD8AB6F1DD0338500F62573 /* UIWebView+AFNetworking.m in Sources */,
 				CCAE11631DD2CADF00DE8FE8 /* CJGameViewController.m in Sources */,
 				CC6C69FB1DCC63070040A703 /* CJPageContentView.m in Sources */,

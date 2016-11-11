@@ -7,9 +7,12 @@
 //
 
 #import "CJBaseAnchorViewController.h"
+#import "CJRoomNormalViewController.h"
+#import "CJRoomShowViewController.h"
 
 
-@interface CJBaseAnchorViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@interface CJBaseAnchorViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate>
 
 @end
 
@@ -172,6 +175,71 @@
     return headerView;
     
 }
+
+
+
+
+
+
+
+
+#pragma mark - 遵守 UICollectionViewDelegate 协议
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // 1.取出对应的主播信息
+    CJAnchorGroup *anchorGroup = self.baseViewModel.anchorGroups[indexPath.section];
+    CJAnchorModel *anchorModel = anchorGroup.anchorModels[indexPath.item];
+    
+    
+    // 2.判断是  秀场房间  还是  普通房间
+    // 判断 ? 普通房间 : 秀场房间
+    (anchorModel.isVertical == 0) ? [self pushNormalRoomViewController] : [self presentShowRoomViewController];
+    
+    
+}
+
+
+/**
+ *  push普通房间
+ */
+- (void)pushNormalRoomViewController
+{
+    
+    // 1.创建CJRoomNormalViewController
+    CJRoomNormalViewController *roomNormalVc = [[CJRoomNormalViewController alloc] init];
+    
+    
+    // 2.以Push方式弹出
+    [self.navigationController pushViewController:roomNormalVc animated:YES];
+}
+
+
+/**
+ *  presentModal秀场房间
+ */
+- (void)presentShowRoomViewController
+{
+    
+    // 1.创建CJRoomShowViewController
+    CJRoomShowViewController *roomShowVc = [[CJRoomShowViewController alloc] init];
+    
+    
+    // 2.以Modal方式弹出
+    [self presentViewController:roomShowVc animated:YES completion:nil];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

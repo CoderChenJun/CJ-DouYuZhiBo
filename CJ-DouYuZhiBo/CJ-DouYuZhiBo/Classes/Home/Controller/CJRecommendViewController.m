@@ -147,8 +147,14 @@
     self.baseViewModel = self.recommendViewModel;
     
     
+#pragma mark - 创建组
+    // 2.创建组
+    dispatch_group_t dispatchGroup = dispatch_group_create();
     
+#pragma mark - 发出请求 进入组
+    dispatch_group_enter(dispatchGroup);// 发出请求 进入组
     
+
     // 2.请求---推荐数据
     [self.recommendViewModel requestDataFinishBlock:^{
         
@@ -169,24 +175,44 @@
         // 2.2.3.将数据传递给GameView
         self.recommendGameView.baseGames = tempGroups;
         
+        
+#pragma mark - 获取数据  离开组
+        dispatch_group_leave(dispatchGroup);// 获取数据 离开组
+        CJLog(@"CJRecommendViewController------推荐数据请求完成");
+        
+        
     }];
     
     
     
     
     
-#warning mark - 轮播器API比较慢,所以放在推荐数据后面
+#pragma mark - 发出请求 进入组
+    dispatch_group_enter(dispatchGroup);// 发出请求进入组
     // 3.请求---轮播器数据
     [self.recommendViewModel requestCycleDataFinishBlock:^{
-        CJLog(@"CJRecommendViewController------轮播器数据请求完成");
         
         self.recommendCycleView.cycleModels = self.recommendViewModel.cycleModels;
         
-#warning mark - 数据请求完成,隐藏动画
+#pragma mark - 获取数据  离开组
+        dispatch_group_leave(dispatchGroup);// 获取数据 离开组
+        CJLog(@"CJRecommendViewController------轮播器数据请求完成");
+    }];
+    
+    
+    
+#pragma mark - 所有数据都请求到后,进行排序
+    // 6.所有数据都请求到后,隐藏动画,显示数据
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^{
+        
+        CJLog(@"CJRecommendViewController------推荐界面所有数据请求完成");
+        
         // 4.数据请求完成
         [self loadDateFinished];
         
-    }];
+    });
+    
+    
     
     
 }

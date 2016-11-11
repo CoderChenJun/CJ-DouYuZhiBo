@@ -36,7 +36,7 @@
         _amuseMenuView = [CJAmuseMenuView amuseMenuView];
         _amuseMenuView.frame = CGRectMake(0, -CJAmuseMenuViewH, CJUIScreenW, CJAmuseMenuViewH);
 //        _amuseMenuView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        _amuseMenuView.backgroundColor = [UIColor purpleColor];
+//        _amuseMenuView.backgroundColor = [UIColor purpleColor];
         
     }
     return _amuseMenuView;
@@ -77,7 +77,14 @@
     
     // 2.请求数据
     [self.amuseViewModel loadAmuseDataFinishBlock:^{
+        
         [self.collectionView reloadData];
+        
+        
+        NSMutableArray *tempArray = self.amuseViewModel.anchorGroups;
+        [tempArray removeObjectAtIndex:0];
+        self.amuseMenuView.anchorGroups = tempArray;
+        
     }];
     
 }

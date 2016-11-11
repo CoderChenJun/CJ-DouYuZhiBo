@@ -133,6 +133,8 @@
     
     // 注册cell
     [self.collectionView registerNib:[UINib nibWithNibName:@"CJCollectionGameCell" bundle:nil] forCellWithReuseIdentifier:CJCollectionGameCellID];
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, CJCollectionGameViewEdgeInsetsMargin, 0, CJCollectionGameViewEdgeInsetsMargin);
     
 }
 
@@ -151,8 +153,6 @@
     layout.minimumInteritemSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, CJCollectionGameViewEdgeInsetsMargin, 0, CJCollectionGameViewEdgeInsetsMargin);
     
 }
 

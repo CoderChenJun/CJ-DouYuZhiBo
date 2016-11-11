@@ -8,6 +8,7 @@
 
 #import "CJRoomNormalViewController.h"
 
+
 @interface CJRoomNormalViewController ()<UIGestureRecognizerDelegate>
 
 @end
@@ -31,7 +32,6 @@
     
     // 1.隐藏导航栏
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
     
     // 2.依然保持手势
     self.navigationController.interactivePopGestureRecognizer.delegate = self;

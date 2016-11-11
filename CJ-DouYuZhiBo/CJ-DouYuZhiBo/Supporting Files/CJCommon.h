@@ -17,12 +17,6 @@
 
 
 
-
-
-
-
-
-
 #define ThemeColor [UIColor colorWithRed:(86)/255.0 green:(171)/255.0 blue:(228)/255.0 alpha:1.0]
 
 //#define ThemeFont @"Helvetica-Bold"
@@ -63,13 +57,6 @@
 
 #define CJUIScreenW [UIScreen mainScreen].bounds.size.width
 #define CJUIScreenH [UIScreen mainScreen].bounds.size.height
-
-
-
-
-
-
-
 
 
 

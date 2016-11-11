@@ -111,6 +111,7 @@
 		CCF713141DD5992700CC377F /* CJRoomShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713131DD5992700CC377F /* CJRoomShowViewController.m */; };
 		CCF713171DD5995700CC377F /* CJRoomNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713161DD5995700CC377F /* CJRoomNormalViewController.m */; };
 		CCF7131A1DD5A0FA00CC377F /* CJCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF713191DD5A0FA00CC377F /* CJCustomNavigationController.m */; };
+		CCF7131E1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF7131D1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,6 +312,8 @@
 		CCF713161DD5995700CC377F /* CJRoomNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomNormalViewController.m; sourceTree = "<group>"; };
 		CCF713181DD5A0FA00CC377F /* CJCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCustomNavigationController.h; sourceTree = "<group>"; };
 		CCF713191DD5A0FA00CC377F /* CJCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCustomNavigationController.m; sourceTree = "<group>"; };
+		CCF7131C1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		CCF7131D1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -781,6 +784,7 @@
 		CCD8AB3A1DD02FBA00F62573 /* Lib(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				CCF7131B1DD5B68600CC377F /* FDFullscreenPopGesture */,
 				CC0D73821DD164E6005CE9D9 /* MJRefresh */,
 				CCAB12BF1DD0519200ECDF78 /* MJExtension */,
 				CCD8AB521DD0338500F62573 /* UIKit+AFNetworking */,
@@ -869,6 +873,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CCF7131B1DD5B68600CC377F /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				CCF7131C1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.h */,
+				CCF7131D1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1040,6 +1053,7 @@
 				CCAB12D71DD0519200ECDF78 /* MJExtensionConst.m in Sources */,
 				CC4BCEFF1DD4162C00F7032C /* CJAmuseViewController.m in Sources */,
 				CCD8AB491DD0305200F62573 /* AFHTTPSessionManager.m in Sources */,
+				CCF7131E1DD5B68600CC377F /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				CC4BCF021DD41CF100F7032C /* MJChiBaoZiHeader.m in Sources */,
 				CCAB12E31DD0526300ECDF78 /* CJAnchorGroup.m in Sources */,
 				CC0D73B41DD164E6005CE9D9 /* MJRefreshFooter.m in Sources */,

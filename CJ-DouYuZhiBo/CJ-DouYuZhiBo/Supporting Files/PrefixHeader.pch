@@ -21,9 +21,6 @@
 
 
 
-
-
-
 // 宏头文件
 #import "CJCommon.h"
 
@@ -40,22 +37,13 @@
 #import "UIKit+AFNetworking.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/// An opaque type that represents an Objective-C declared property.
+typedef struct objc_property *objc_property_t;
 
 
 
